@@ -1,0 +1,632 @@
+https://codepen.io/x-wang/pen/zbbvPQ
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background: #000;
+}
+li {
+  list-style: none;
+}
+input[type="radio"] {
+  display: none;
+}
+.js-slider {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.js-slider_item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: right center;
+  transform: translate3d(0%, 0%, 0) rotateY(30deg) scaleX(0.95);
+  transition: all 1s ease,transform 1s cubic-bezier(0.43, 0.28, 0.51, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_item.img-1,
+#s-2:checked ~ .js-slider .js-slider_item.img-2,
+#s-3:checked ~ .js-slider .js-slider_item.img-3 {
+  opacity: 1;
+  visibility: visible;
+  transform-origin: left center;
+  transform: translate3d(0, 0, 0) rotateY(0deg) scaleX(1);
+}
+.js-slider_img {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+}
+.c-img-w-full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate3d(-50%, -50%, 0);
+}
+.c-img-h-full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}
+figcaption {
+  display: block;
+}
+.wo-h3 {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e60012;
+}
+.c-label {
+  display: inline-block;
+  color: #eee;
+  background-color: rgba(139,0,10,0.9);
+  line-height: 1;
+  padding: 0.5em 0.9em;
+  margin-right: 0.5em;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.view-sm {
+  display: none;
+}
+.js-slider_nav {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translate3d(0, -50%, 0);
+}
+.js-slider_nav_item.prev {
+  left: 0;
+}
+.js-slider_nav_item.next {
+  right: 0;
+  transform: rotateY(180deg);
+}
+.js-slider_nav_item {
+  position: absolute;
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #e60012;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1rem;
+  top: 55%;
+  width: 1rem;
+  height: 1px;
+  background-color: #e60012;
+  transform-origin: left bottom;
+  transform: translate3d(0, -50%, 0) rotate(-45deg);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:hover {
+   transform: translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item.next:hover {
+   transform: rotateY(180deg) translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item:hover:before {
+  transform: translate3d(0, -50%, 0) rotate(-30deg);
+}
+.js-slider_nav_item:after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 2rem;
+  height: 1px;
+  background-color: #e60012;
+  transform: translate3d(-50%, -50%, 0);
+}
+#s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,
+#s-2:checked ~ .js-slider .js-slider_nav .s-nav-2,
+#s-3:checked ~ .js-slider .js-slider_nav .s-nav-3 {
+  display: block;
+}
+.js-slider_indicator {
+  position: absolute;
+  left: 0;
+  top: 63%;
+  width: 100%;
+  text-align: center;
+}
+.js-slider-indi {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+}
+.js-slider-indi:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background: #e60012;
+  transform: translate3d(-50%, -50%, 0);
+}
+.js-slider-indi:hover:after {
+  transform: translate3d(-50%, -50%, 0) scale(1.5);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_indicator .indi-1:after,
+#s-2:checked ~ .js-slider .js-slider_indicator .indi-2:after,
+#s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
+  transform: translate3d(-50%, -50%, 0) scale(2.5);
+}
+
+
+
+
+
+<input type="radio" id="s-1" name="slider-control" checked="checked">
+<input type="radio" id="s-2" name="slider-control">
+<input type="radio" id="s-3" name="slider-control">
+<div class="js-slider">
+  <figure class="js-slider_item img-1">
+    <div class="js-slider_img">
+      <img class="c-img-w-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_3.jpg" alt="">
+    </div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">
+        <div class="c-label">全点初公開</div>
+        <br class="view-sm mb-s">津和野藩伝来摺物</h3>
+      <ul class="wo-credit">
+        <li>摺物118枚 寛政元-12年 (1789-1800)</li>
+        <li>島根県立美術館(永田コレクション)</li>
+        <li>通期展示
+          <span class="c-txt-s">※4期に分けて全点を展示</span></li>
+      </ul>
+    </figcaption>
+  </figure>
+  <figure class="js-slider_item img-2">
+    <div class="js-slider_img">
+      <img class="c-img-h-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_1.jpg" alt=""></div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">「風流無くてなゝくせ」遠眼鏡</h3>
+      <ul class="wo-credit">
+        <li>大判 享和年間 (1801-04)</li>
+        <li>リー・ダークス・コレクション</li>
+        <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li></ul>
+    </figcaption>
+  </figure>
+  <figure class="js-slider_item img-3">
+    <div class="js-slider_img">
+      <img class="c-img-h-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_2.jpg" alt=""></div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">「風流無くてなゝくせ」ほおずき</h3>
+      <ul class="wo-credit">
+        <li>大判 享和年間 (1801-04)</li>
+        <li>米・個人蔵</li>
+        <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li></ul>
+    </figcaption>
+  </figure>
+  <div class="js-slider_nav">
+    <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+    <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
+  </div>
+  <div class="js-slider_indicator">
+    <div class="js-slider-indi indi-1"></div>
+    <div class="js-slider-indi indi-2"></div>
+    <div class="js-slider-indi indi-3"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://codepen.io/cchana/pen/xxwgLgY
+
+
+<h1>Pure CSS Slideshow</h1>
+<div class="container">
+	<div class="slideshow">
+		<div id="slide-1" class="slide">
+			<a href="#slide-7"></a>
+			<a href="#slide-2"></a>
+			<img src="https://c1.staticflickr.com/9/8724/16310801553_cea90ae63d_n.jpg" />
+		</div>
+		<div id="slide-2" class="slide">
+			<a href="#slide-1"></a>
+			<a href="#slide-3"></a>
+			<img src="https://c2.staticflickr.com/4/3719/19819674272_2384feaaf8_n.jpg" />
+		</div>
+		<div id="slide-3" class="slide">
+			<a href="#slide-2"></a>
+			<a href="#slide-4"></a>
+			<img src="https://c2.staticflickr.com/2/1627/24319275501_3ec6f36fa7_n.jpg" />
+		</div>
+		<div id="slide-4" class="slide">
+			<a href="#slide-3"></a>
+			<a href="#slide-5"></a>
+			<img src="https://c2.staticflickr.com/2/1460/25194537936_e3c54faefc_n.jpg" />
+		</div>
+		<div id="slide-5" class="slide">
+			<a href="#slide-4"></a>
+			<a href="#slide-6"></a>
+			<img src="https://c2.staticflickr.com/2/1460/26216238325_9c425923a7_n.jpg" />
+		</div>
+		<div id="slide-6" class="slide">
+			<a href="#slide-5"></a>
+			<a href="#slide-7"></a>
+			<img src="https://c2.staticflickr.com/8/7578/26194232483_8204bf119b_n.jpg" />
+		</div>
+		<div id="slide-7" class="slide">
+			<a href="#slide-6"></a>
+			<a href="#slide-1"></a>
+			<img src="https://c2.staticflickr.com/8/7106/26862741906_d5283c42ba_n.jpg" />
+		</div>
+	</div>
+  <div class="pagination">
+    <a href="#slide-1"><span>1</span></a>
+    <a href="#slide-2"><span>2</span></a>
+    <a href="#slide-3"><span>3</span></a>
+    <a href="#slide-4"><span>4</span></a>
+    <a href="#slide-5"><span>5</span></a>
+    <a href="#slide-6"><span>6</span></a>
+    <a href="#slide-7"><span>7</span></a>
+  </div>
+</div>
+
+<aside>
+
+  <h2>About</h2>
+
+  <p>I wanted to create a pure CSS image slideshow and this is the result.</p>
+
+  <p>This slideshow was created using just CSS and HTML. Click anywhere on the left half to go to the previous slide, anywhere on the right half to go to the next slide. Oh and it loops in a carousel.</p>
+
+  <p>There's pagination too so you can jump to any slide.</p>
+
+  <h2>What could be improved?</h2>
+
+  <ul>
+    <li>Highlight the current slide in the pagination</li>
+    <li>Prevent page jump when using pagination</li>
+    <li>Automatically cycle through images</li>
+  </ul>
+  
+</aside>
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+body {
+  background: linear-gradient(-45deg, #83a4d4, #b6fbff);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+aside,
+.container {
+  margin: 0 auto 20px;
+  max-width: 500px;
+}
+
+.container {
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+  transition: box-shadow 200ms;
+  &:hover {
+    box-shadow: 0 10px 50px -10px rgba(0,0,0,0.25);
+  }
+}
+.slideshow {
+	position: relative;
+	width: 100%;
+	&:after {
+		content: '';
+		display: block;
+		padding-bottom: calc((100% / 6) * 4);
+	}
+	&:hover a {
+		opacity: 1;
+	}
+	a {
+		opacity: 0;
+		position: relative;
+		text-decoration: none;
+		transition: opacity 0.5s;
+		&:after {
+			border-color: #FFF #FFF transparent transparent;
+			border-style: solid;
+			border-width: 2px;
+			color: #FFF;
+			display: block;
+			height: 10px;
+			position: absolute;
+			top: calc(50% - 5px);
+			width: 10px;
+		}
+		&:first-child:after {
+			content: '';
+			left: 10px;
+			transform: rotate(-135deg);
+		}
+		&:nth-child(2):after {
+			content: '';
+			right: 10px;
+			transform: rotate(45deg);
+		}
+	}
+	.slide {
+		background-color: #FFF;
+		box-sizing: border-box;
+		display: none;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		&:first-child,
+		&:target {
+			display: block;
+		}
+		a {
+			display: block;
+			height: 100%;
+			position: absolute;
+			width: 50%;
+			&:nth-child(2) {
+				left: 50%;
+			}
+		}
+		img {
+      border-radius: 5px;
+			width: 100%;
+		}
+	}
+}
+.pagination {
+  display: flex;
+  bottom: 10px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  a {
+    background: rgba(#FFF,0.75);
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    width: 10px;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+a:target {
+	color: red;
+}
+
+
+
+https://codepen.io/KamilDyrek/pen/rPKOaV
+
+<!-- This example illustrates how to create layout of slides stacked on each  other(especially useful for fade in/out transitions). It's achieved without setting their height and avoiding position: absolute; so they are fully flexible and easy to keep in normal page flow. -->
+<input type="radio" name="switch" id="i_1">
+<input type="radio" name="switch" id="i_2">
+<input type="radio" name="switch" id="i_3" checked>
+<input type="radio" name="switch" id="i_4">
+<input type="radio" name="switch" id="i_5">
+<input type="radio" name="switch" id="i_6">
+<div class="wrapper">
+  <div class="slide">
+    <div class="content content1">
+        <p>Nullam quis pretium nisl, suscipit imperdiet metus. Fusce efficitur odio id dolor egestas, quis dignissim orci consequat. Pellentesque libero nunc, volutpat et ligula eu, aliquam iaculis odio. 
+          <p>In venenatis aliquet ligula sed accumsan. Maecenas imperdiet a ligula eleifend consectetur.
+
+<p>Nam a urna dapibus, lobortis lectus vitae, blandit dolor. Donec elementum elit vitae egestas feugiat. Praesent eu mauris quis leo molestie eleifend. Donec est nisl, facilisis nec venenatis vitae, efficitur et augue. Donec fringilla dui dui, nec viverra metus viverra et. Etiam nec convallis est, in cursus nisi. Integer vel ullamcorper ante.  <p>Pellentesque et viverra risus. Duis volutpat felis sit amet dictum fermentum. Fusce condimentum porta diam, ut commodo orci accumsan sed. Aenean mi leo, lobortis eu porta a, mattis malesuada nisi. Morbi varius efficitur nisi ac mollis. Fusce et mauris vitae sem varius porttitor. 
+      <p>Nullam vel elit massa. Nam sed egestas neque, ut sollicitudin urna. Curabitur vestibulum felis vitae sapien venenatis mattis.
+
+<p>Praesent mattis est faucibus tellus eleifend viverra. Nam non lectus vulputate lacus tristique fermentum. Fusce venenatis mollis imperdiet. Nunc dictum nisi quis mauris varius tincidunt. Suspendisse imperdiet felis lectus. Nunc pharetra tellus ac nulla scelerisque pulvinar. Fusce non blandit dui, sed facilisis neque. Donec gravida nibh dolor, vitae imperdiet lorem varius et. Maecenas pulvinar enim eget velit porta lobortis. Pellentesque sagittis tristique fermentum. <p>Aliquam pretium magna sed consectetur pellentesque. Maecenas id sem eu urna molestie lobortis lacinia nec nulla. Donec tristique tellus lectus, eu faucibus erat tincidunt non. Nunc ut mollis velit.
+    </div>   
+  </div>
+  <div class="slide">
+    <div class="content content2">
+      <span>♫</span>
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content3">
+      
+    </div>
+  </div>
+  <div class="slide">
+    <div class="content content4">
+  <p>Nullam vel elit massa. Nam sed egestas neque, ut sollicitudin urna. Curabitur vestibulum felis vitae sapien venenatis mattis.
+
+<p>Praesent mattis est faucibus tellus eleifend viverra. Nam non lectus vulputate lacus tristique fermentum. Fusce venenatis mollis imperdiet. Nunc dictum nisi quis mauris varius tincidunt. Suspendisse imperdiet felis lectus. Nunc pharetra tellus ac nulla scelerisque pulvinar. Fusce non blandit dui, sed facilisis neque. Donec gravida nibh dolor, vitae imperdiet lorem varius et. Maecenas pulvinar enim eget velit porta lobortis. Pellentesque sagittis tristique fermentum. <p>Aliquam pretium magna sed consectetur pellentesque. Maecenas id sem eu urna molestie lobortis lacinia nec nulla. Donec tristique tellus lectus, eu faucibus erat tincidunt non. Nunc ut mollis velit.     
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content5">
+      <span>♪</span>
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content6">
+      <span>♬</span>
+    </div>   
+  </div>  
+</div>
+<div class="controls">
+  <label for="i_1">⬤</label>
+  <label for="i_2">⬤</label>
+  <label for="i_3">⬤</label>
+  <label for="i_4">⬤</label>
+  <label for="i_5">⬤</label>
+  <label for="i_6">⬤</label>
+</div>
+<a target="_blank" href="https://twitter.com/kamildyrek"><svg style="width:2em;height:2em;position:fixed;top:1em;left:1em;opacity:.8;" viewBox="0 0 24 24"><path fill="#fff" d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" /></svg></a>
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+/* Some resets, not essencial for this example to work */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Base styles for this example */
+
+.wrapper {
+  width: 50vw; /* unfortunately width has to be set to some hard value */
+  display: flex;
+}
+
+.slide {
+  width: 0;
+}
+
+.content {
+  width: 50vw;
+  height: 100%; /* this is optional if you want every slide to have same height as the highest one */
+}
+
+/* Additional styling */
+
+html, body {
+  background-color: #BDBDBD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  font-family: Lato;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 3px 3px 20px #9E9E9E;
+}
+
+span {
+  background-color: white;
+  text-align: center;
+  line-height: 4rem;
+  width: 4rem;
+  border-radius: 8rem;
+  color: #616161;
+  font-size: 2rem;
+}
+
+.content {
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.content2,
+.content5,
+.content6
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background-color: #E0E0E0;
+}
+
+.content3 {
+  background-image: url(https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: cover;
+  background-position: center;
+}
+#i_1:checked ~ .wrapper .content1,
+#i_2:checked ~ .wrapper .content2,
+#i_3:checked ~ .wrapper .content3,
+#i_4:checked ~ .wrapper .content4,
+#i_5:checked ~ .wrapper .content5,
+#i_6:checked ~ .wrapper .content6 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+label {
+  color: #E0E0E0;
+  transition-duration: .6s;
+  cursor: pointer;
+}
+
+#i_1:checked ~ .controls label[for="i_1"],
+#i_2:checked ~ .controls label[for="i_2"],
+#i_3:checked ~ .controls label[for="i_3"],
+#i_4:checked ~ .controls label[for="i_4"],
+#i_5:checked ~ .controls label[for="i_5"],
+#i_6:checked ~ .controls label[for="i_6"] {
+  color: #424242;
+}

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Web Site</title>
+        <meta name="description" content="My Website">
+        <link rel="stylesheet" href="StyleSheets/slideshow2.css">
+    </head>
+
+	<body> 
+		<header> <h1> Slideshow page </h1></header>
+        
+		<p class="index"> Make the preview work:</p>
+        <ol>
+        <li class="index"><a href="lamb.html">Mary had a little lamb</a></li>
+        <li class="index"><a href="grub.html">I wish I were a little grub</a></li>
+        <li class="index"><a href="teapot.html">I'm a little teapot</a></li>
+        <li class="index"><a href="slideshow.html">slideshow!</a></li>
+        <li class="index"><a href="slideshow2.html">slideshow2!</a></li>
+        <li class="index"><a href="index.html"> Return to home page</a></li> 
+		</ol>
+     
+
+<div>
+
+        <!-- https://codepen.io/KamilDyrek/pen/rPKOaV -->
+
+<!-- This example illustrates how to create layout of slides stacked on each  other(especially useful for fade in/out transitions). It's achieved without setting their height and avoiding position: absolute; so they are fully flexible and easy to keep in normal page flow. -->
+<input type="radio" name="switch" id="i_1" checked>
+<input type="radio" name="switch" id="i_2">
+<input type="radio" name="switch" id="i_3">
+<input type="radio" name="switch" id="i_4">
+<input type="radio" name="switch" id="i_5">
+<input type="radio" name="switch" id="i_6">
+<div class="wrapper">
+  <div class="slide">
+    <div class="content content1">
+        <p>Nullam quis pretium nisl, suscipit imperdiet metus. Fusce efficitur odio id dolor egestas, quis dignissim orci consequat. Pellentesque libero nunc, volutpat et ligula eu, aliquam iaculis odio. 
+          <p>In venenatis aliquet ligula sed accumsan. Maecenas imperdiet a ligula eleifend consectetur.
+
+<p>Nam a urna dapibus, lobortis lectus vitae, blandit dolor. Donec elementum elit vitae egestas feugiat. Praesent eu mauris quis leo molestie eleifend. Donec est nisl, facilisis nec venenatis vitae, efficitur et augue. Donec fringilla dui dui, nec viverra metus viverra et. Etiam nec convallis est, in cursus nisi. Integer vel ullamcorper ante.  <p>Pellentesque et viverra risus. Duis volutpat felis sit amet dictum fermentum. Fusce condimentum porta diam, ut commodo orci accumsan sed. Aenean mi leo, lobortis eu porta a, mattis malesuada nisi. Morbi varius efficitur nisi ac mollis. Fusce et mauris vitae sem varius porttitor. 
+      <p>Nullam vel elit massa. Nam sed egestas neque, ut sollicitudin urna. Curabitur vestibulum felis vitae sapien venenatis mattis.
+
+<p>Praesent mattis est faucibus tellus eleifend viverra. Nam non lectus vulputate lacus tristique fermentum. Fusce venenatis mollis imperdiet. Nunc dictum nisi quis mauris varius tincidunt. Suspendisse imperdiet felis lectus. Nunc pharetra tellus ac nulla scelerisque pulvinar. Fusce non blandit dui, sed facilisis neque. Donec gravida nibh dolor, vitae imperdiet lorem varius et. Maecenas pulvinar enim eget velit porta lobortis. Pellentesque sagittis tristique fermentum. <p>Aliquam pretium magna sed consectetur pellentesque. Maecenas id sem eu urna molestie lobortis lacinia nec nulla. Donec tristique tellus lectus, eu faucibus erat tincidunt non. Nunc ut mollis velit.
+    </div>   
+  </div>
+  <div class="slide">
+    <div class="content content2">
+      <img src="Images/MaryLamb.jpg" alt="Image of a Mary with her lamb">
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content3">
+      
+    </div>
+  </div>
+  <div class="slide">
+    <div class="content content4">
+  <p>Nullam vel elit massa. Nam sed egestas neque, ut sollicitudin urna. Curabitur vestibulum felis vitae sapien venenatis mattis.
+
+<p>Praesent mattis est faucibus tellus eleifend viverra. Nam non lectus vulputate lacus tristique fermentum. Fusce venenatis mollis imperdiet. Nunc dictum nisi quis mauris varius tincidunt. Suspendisse imperdiet felis lectus. Nunc pharetra tellus ac nulla scelerisque pulvinar. Fusce non blandit dui, sed facilisis neque. Donec gravida nibh dolor, vitae imperdiet lorem varius et. Maecenas pulvinar enim eget velit porta lobortis. Pellentesque sagittis tristique fermentum. <p>Aliquam pretium magna sed consectetur pellentesque. Maecenas id sem eu urna molestie lobortis lacinia nec nulla. Donec tristique tellus lectus, eu faucibus erat tincidunt non. Nunc ut mollis velit.     
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content5">
+      <img src="Images/Teapot.jpg" alt="Image of a teapot">
+        
+    </div>    
+  </div>
+  <div class="slide">
+    <div class="content content6">
+      <img src="Images/WhiskersGrub.jpg" alt="Image of a grub with whiskers">
+        
+    </div>   
+  </div>  
+</div>
+<div class="controls">
+  <label for="i_1">⬤</label>
+  <label for="i_2">⬤</label>
+  <label for="i_3">⬤</label>
+  <label for="i_4">⬤</label>
+  <label for="i_5">⬤</label>
+  <label for="i_6">⬤</label>
+</div>
+<a target="_blank" href="https://twitter.com/kamildyrek"><svg style="width:2em;height:2em;position:fixed;top:1em;left:1em;opacity:.8;" viewBox="0 0 24 24"><path fill="#fff" d="M17.71,9.33C18.19,8.93 18.75,8.45 19,7.92C18.59,8.13 18.1,8.26 17.56,8.33C18.06,7.97 18.47,7.5 18.68,6.86C18.16,7.14 17.63,7.38 16.97,7.5C15.42,5.63 11.71,7.15 12.37,9.95C9.76,9.79 8.17,8.61 6.85,7.16C6.1,8.38 6.75,10.23 7.64,10.74C7.18,10.71 6.83,10.57 6.5,10.41C6.54,11.95 7.39,12.69 8.58,13.09C8.22,13.16 7.82,13.18 7.44,13.12C7.81,14.19 8.58,14.86 9.9,15C9,15.76 7.34,16.29 6,16.08C7.15,16.81 8.46,17.39 10.28,17.31C14.69,17.11 17.64,13.95 17.71,9.33M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" /></svg></a>
+
+
+
+</div>
+
+	</body>
+</html>
