@@ -203,9 +203,9 @@ header object{
 
     nav #menu{
         display: none;
-        border-radius: 20px;
+        /* border-radius: 20px;
         width:100%;
-        clear: right;
+        clear: right; */
     }
     
     nav ol{
@@ -249,9 +249,9 @@ header object{
         text-decoration: none;
     }
 
-    #toggle:checked + #menu{
+    /* #toggle:checked + #menu{
         display: block;
-    }
+    } */
 }
 /*Tablet-------------------------------------*/
 @media only screen and (min-width: 571px) and (max-width: 1010px){
