@@ -15,7 +15,32 @@
 		<p class="grub">With whiskers on my tummy.</p>
 		<p class="grub">I'd climb into a honey pot,</p>
 		<p class="grub">And make my tummy gummy</p><br>
-        
+
+        <input type = "checkbox" id ="checkbox" checked/>
+       
+
+
+
+        <input type="radio" id="age1" name="age" value="30" checked>
+        <label for="age1">0 - 30</label><br>
+        <input type="radio" id="age2" name="age" value="60"checked>
+        <label for="age2">31 - 60</label><br>  
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">61 - 100</label><br><br>
+
+        <script>
+            let a  = document.getElementById("checkbox")
+            console.log(a)
+
+            let b = document.getElementById("age1")
+            let c = document.getElementById("age2")
+            let d = document.getElementById("age3")
+
+            b.checked = 0;
+            c.checked = {};
+            d.checked = 0;
+            // a.checked = false; 
+        </script>
         <img src="Images/WhiskersGrub.jpg" alt="Image of a grub with whiskers">
         
         <a href="index.html"> Return to home page</a>
