@@ -1,17 +1,5 @@
 //global variables that will store the toolbox colour palette
 //amnd the helper functions
-let toolbox = null;
-let colourP = null;
-let helpers = null;
-let drawManager = null;
-let sliderManager = null;
-
-let currentFigureIndex = 0;
-let currentDrawingIndex = 0;
-let currentPartIndex = 0;
-let currentFigure;
-let currentDrawing;
-let currentPart;
 
 
 let currentTab = 0
@@ -81,59 +69,7 @@ function setup() {
 	tabVal.tabStarts = [tabVal.start, tabVal.start + tabVal.distance,tabVal.start + tabVal.distance*2 ]
 	//create the drawManager
 	drawTabs();
-	
-	
-	
 
-	function sumOfArray(array, l, R) {
-		// console.log("l,r",l,R)
-		// console.log("array[l],array[r]",array[l],array[R])
-		if (l > R) {
-				return 0;
-			} else if (l == R) {
-				// console.log("elseStatement")
-				return array[l];
-			}  
-		
-			var middle =	Math.floor((l+R)/2);
-			// console.log("lmr",l,parseInt(middle),R)
-			var sumL = sumOfArray(array,l, middle);
-			var sumR = sumOfArray(array,middle+1, R);
-			return sumL + sumR;
-		}
-
-
-		function sumOfNumbers(n) {
-			// console.log("sumOfNumbers running")
-		if (n == 0) {
-		return 0;
-		} for (let i =1; i<= n; i++){
-			array.push(i);
-		} 
-		// console.log("array before addition",array)
-		return sumOfArray(array, 0, n-1);
-		}
-
-		let array = []
-	console.log(2,sumOfNumbers(2));
-	array = []
-	console.log(3,sumOfNumbers(3));
-	array = []
-	console.log(4,sumOfNumbers(4));
-	array = []
-	console.log(5,sumOfNumbers(5));
-	array = []
-	console.log(6,sumOfNumbers(6));
-	array = []
-	console.log(7,sumOfNumbers(7));
-	array = []
-	console.log(8,sumOfNumbers(8));
-	array = []
-	console.log(9,sumOfNumbers(9));
-	array = []
-	console.log(10,sumOfNumbers(10));
-	array = []
-	console.log(11,sumOfNumbers(11));
 }
 
 function draw() {
@@ -159,7 +95,7 @@ function fitToScreen(){
  canvasContainer = select('#p5canvas');
  var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
  c.parent('p5canvas');
- drawManager.reset();
+ 
 }
 
 function drawTabs(){

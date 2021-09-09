@@ -7,24 +7,62 @@ html,
 body {
   margin: 0px;
   height: 100% ;
-  padding: 0px;
+  
 }
+
+.English{
+	display: block;
+	color: violet;
+}
+
+.Norsk{
+	
+	color: violet;
+}
+
+/* Language Change */
+#language_EN:checked ~ .English {
+	display:inline;
+}
+
+#language_EN:checked ~ .Norsk {
+	display: none;
+}
+
 
 /* Hidden elements css */
-#hiddenElements {
+/* #hiddenElements {
   display: none;
-  /* margin: ; */
+  margin: ;
+} */
+
+/* Header text*/
+
+h1 a{
+	text-emphasis: bold;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5vw;
 }
 
-/* Header */
+#mainLogo a{
+
+}
 /* header {
-  
+
+	
+
 } */
-#header{
-	grid-area: header;
+header,footer{
+	/* grid-area: header; */
 	display: flex;
-	/* margin: 0px 5px; */
-	justify-content: space-evenly;
+	/* flex-direction: row; */
+
+	justify-content: space-between;
+	background-color: #5139e4;
+	width: 100%;
+
+
 	
 }
 
@@ -35,160 +73,58 @@ body {
 .header {
   background-color: #999;
 } */ 
-
-/* sidebar */
-#sidebar {
-  grid-area: sidebar;
-  overflow-y: hidden;
-
-}
-#sidebarLeft{
-	grid-area: sidebarLeft;
-	height: 100%;
-	overflow: auto;
-	/* align-self: stretch; */
-}
-
-#sidebarRight{
-	grid-area: sidebarRight;
-	height: 100%;
-	overflow-y: auto;
-	overflow-x: hidden;
-	padding: 0px;
-	/* align-items: stretch; */
-}
-#sidebarRight > .slide {
-    width: 300px;
-    height: 200px;
-    background: green;
-	overflow: auto;
+input { 
 	
-}
-.sideBarItem {
-  height: 51px;
-  width: 51px;
-  margin: 5px;
-  padding: 0px;
-}
-#sidebarLeft > #orderBar {
-    width: 300px;
-    height: 100%;
-    background: rgb(71, 10, 10);
-	overflow: auto;
-
-  /* margin: 15px; */
-  /* text-align: left; */
-
-}
-
-
-.sideBarItem img {
-  height: 50px;
-  width: 50px;
-  /* margin: 1px; */
-  /* padding: 1px; */
-  
-}
-.box {
-  background-color: #444;
-  color: #fff;
-  font-size: 150%;
-}
-/* drawfield css */
-#drawField {
-  grid-area: drawField;
-  /* z-index: 20; */
-}
-
-#canvasButton{
-	position: absolute;
-	top: 400;
-	left: 400;	
-}
-
-
-/* slides */
-.slide{
-	/* width: 300; */
-	/* height: 200; */
-	/* display: block; */
-	/* overflow: none; */
 	
-	/* background-color: aquamarine; */
-	/* align-self: start; */
-	/* overflow-x: hidden; */
-
-
-}
-
-
-
-
-/* footer */
-
-/* .footer {
-  grid-area: footer;
-} */
-
-
-/* Color and optons CSS */
-.colourPalette {
-  grid-area: colourP;
-  display: flex;
-  flex-direction: grid;
-  flex-flow: wrap;
-}
-.colorFill {
-	grid-area: colorfill;
-	display: flex;
-	flex-direction: grid;
-	flex-flow: wrap;
+	width: 300px;
 	
-	/* text-align: left; */
-  }
-
-.inputs {
-  
-  padding: 0px 15px;
-  text-align: left;
-	font-size: 75%;
-}
-#endShapeInput{
-	width: 130px;
+	text-align: left;
+	font-size: xx-large;
+	
+ font-family: "Comic Sans MS", "Comic Sans";
+ 
 }
 
-.colourSwatches {
-  width: 40px;
-  height: 40px;
-  max-height: 40px;
-  max-width: 40px;
-  margin: 5px;
+#p5canvas{
+	height: 300px;
 }
-.colorFillField {
-	width: 40px;
-	height: 40px;
-	max-height: 40px;
-	max-width: 40px;
-	margin: 5px;
-  }
 
+.element{
+	max-width: 500px;
 
+	min-width: 300px;
+	
+/* 	
+	background-color: ; */
+}
 
+img {
+	object-fit: contain;
+	max-width: 500px;
+	max-height: 500px;
+}
 
 /* Grid */
 
-	.wrapper {
-	display: grid;
-	height: 100%;
-	grid-template: none;
-	grid-template-columns:300px 65px minmax(200px, 1fr)  300px;
-	grid-template-rows: auto minmax(200px, 1fr) 160px ;
-	grid-template-areas:
+	main {
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+background-color: #5139e4;
+
+
+	/* display: grid; */
+	/* height: 100%; */
+	/* grid-template: none; */
+	/* grid-template-columns:300px 65px minmax(200px, 1fr)  300px; */
+	/* grid-template-rows: auto minmax(200px, 1fr) 160px ; */
+	/* grid-template-areas:
 		"header header header header"
 		"sidebarLeft sidebar drawField sidebarRight"
-		"sidebarLeft colorfill colorfill sidebarRight";
-	background-color: #fff;
-	color: #444;
+		"colourP colourP  colorfill colorfill"; */
+	/* background-color: #fff; */
+	/* color: #444; */
 	/* align-items: stretch; */
 	}
 
