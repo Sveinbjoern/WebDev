@@ -2,7 +2,7 @@
 //amnd the helper functions
 
 
-let currentTab = 0
+let currentTab = 0;
 
 let keyCodes = {
 	R: 82,
@@ -16,6 +16,7 @@ let tabVal = {
 	tabHeight: -50, //set in setup
 	tabWidth: 220,
 	tabNarrow: 30,
+	
 
 	start: 100,
 	distance: 20, //set in setup
@@ -88,6 +89,53 @@ function setup() {
 	
 	//create the drawManager
 	drawTabs();
+	
+	var template = Handlebars.compile(`Handlebars
+	 <b>{{doesWhat}}
+	 
+	 </b>`);
+	console.log(gridDisplayTemplate({
+		object: [
+		  {
+			name:'"Yehuda Katz"',
+			image: '"imgstring1"',
+			flavourText: '"ERFGSDGHSHFASDFGD"',
+			  }
+		  
+		 
+		], 
+		 
+	  }));
+	  let elem = document.getElementById("gridArea")
+	  elem.append($(gridDisplayTemplate({
+		object: [
+		  {
+			name:'"Yehuda Katz"',
+			image: '"imgstring1"',
+			flavourText: '"ERFGSDGHSHFASDFGD"',
+			  }
+		  
+		 
+		], 
+		 
+	  }) ) )
+	console.log(template({ doesWhat: "rocks!"}));
+
+
+	console.log($(gridDisplayTemplate({
+		object: [
+		  {
+			name:'"Yehuda Katz"',
+			image: '"imgstring1"',
+			flavourText: '"ERFGSDGHSHFASDFGD"',
+			  }
+		  
+		 
+		], 
+		 
+	  }) ))
+  	// execute the compiled template and print the output to the console
+  	
 
 }
 
@@ -128,15 +176,20 @@ function keyPressed(){
 		elem = document.getElementById("cat_type_tegneserie")
 		if (next)
 		{
+			currentTab = 1;
+			update = true;
 			elem.checked = true;
 			changed = true;
 			next = false;
 			console.log(elem)
+			
 		} else if(elem.checked) {next = true}
 
 		elem = document.getElementById("cat_type_husflid")
 		if (next)
 		{
+			currentTab =2;
+			update = true;
 			elem.checked = true;
 			changed = true
 			next = false
@@ -145,6 +198,8 @@ function keyPressed(){
 		elem = document.getElementById("cat_type_utfoldelse")
 		if (next)
 		{
+			currentTab = 3;
+			update = true;
 			elem.checked = true;
 			changed = true
 			next =false
@@ -153,9 +208,12 @@ function keyPressed(){
 
 		if (next || !changed)
 		{
+			currentTab = 0;
+			update = true;
 			elem = document.getElementById("cat_type_all")
 			elem.checked = true;
 			console.log(elem)
+
 		}
 
 	
@@ -177,18 +235,26 @@ function mousePressed(){
 		if (mouseX > tabVal.tabStarts[0]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[0] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			currentTab = 0;
+			let elem = document.getElementById("cat_type_all");
+			elem.checked = true;
 			update = true;
 		} else if (mouseX > tabVal.tabStarts[1]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[1] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			currentTab = 1;
+			let elem = document.getElementById("cat_type_tegneserie");
+			elem.checked = true;
 			update = true;
 		} else if (mouseX > tabVal.tabStarts[2]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[2] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			currentTab = 2;
+			let elem = document.getElementById("cat_type_husflid");
+			elem.checked = true;
 			update = true;
 		} else if (mouseX > tabVal.tabStarts[3]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[3] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			currentTab = 3;
+			let elem = document.getElementById("cat_type_utfoldelse");
+			elem.checked = true;
 			update = true;
 		}
 	}

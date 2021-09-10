@@ -1,59 +1,94 @@
 /* CSS  exclusive for samling.html */
 
-main > #cat_all{
 
-	display: flex;
-flex-wrap: wrap;
+/* main  label {
+    cursor: pointer; 
+    margin: 0px, 10px;
+} */
+/* main > #cat_all{
 
-background-color: #5139e4;
+	
+
+
 }
 
 main > #cat_tegneserie{
-	display: flex;
-flex-wrap: wrap;
+	
+    
 
-background-color: #4b0082;
+
 }
 main > #cat_husflid{
-	display: flex;
-flex-wrap: wrap;
 
-background-color:  #ad9223;
+
 }
 main > #cat_utfoldelse{
-	display: flex;
-flex-wrap: wrap;
 
-background-color: #5139e4;
+
+
+} */
+
+main h2 {
+    margin: 0px;
+    color: white;
+    /* padding: 0px; */
+}
+main h3 {
+    
+    color: white;
+    /* padding: 0px; */
 }
 
-
-
-#cat_type_all:checked + main #cat_all{
-    display: flex;
+#cat_type_all:checked ~ main #cat_all{
+    display: block;
+    background-color: #5139e4;
 }
-#cat_type_all:checked + main #cat_tegneserie, #cat_husflid, #cat_utfoldelse{
+#cat_type_all:checked ~ main #gridArea{
+    background-color: #5139e4;
+}
+#cat_type_all:not(:checked) ~ main #cat_all{
     display: none;
 }
 
-#cat_type_tegneserie:checked + main #cat_tegneserie{
-    display: flex;
+#cat_type_tegneserie:checked ~ main #cat_tegneserie{
+    display: block;
+    background-color: #4b0082;
 }
-#cat_type_tegneserie:checked + main #cat_all, #cat_husflid, #cat_utfoldelse{
+#cat_type_tegneserie:checked ~ main #gridArea{
+    background-color: #4b0082;
+}
+#cat_type_tegneserie:not(:checked) ~ main #cat_tegneserie{
+    display: none;
+    
+}
+
+#cat_type_husflid:checked ~ main #cat_husflid{
+    display: block;
+    background-color:  #ad9223;
+}
+#cat_type_husflid:checked ~ main #gridArea{
+    background-color:  #ad9223;
+}
+#cat_type_husflid:not(:checked) ~ main #cat_husflid{
     display: none;
 }
 
-#cat_type_husflid:checked + main #cat_husflid{
-    display: flex;
+#cat_type_utfoldelse:checked ~ main #cat_utfoldelse{
+    display: block;
+    background-color: #5139e4;
 }
-#cat_type_husflid:checked + main #cat_all, #cat_tegneserie, #cat_utfoldelse{
+#cat_type_utfoldelse:checked ~ main #gridArea{
+    background-color: #5139e4;
+}
+#cat_type_utfoldelse:not(:checked) ~ main #cat_utfoldelse{
     display: none;
 }
 
-#cat_type_utfoldelse:checked + main #cat_utfoldelse{
-    display: flex;
-}
-#cat_type_utfoldelse:checked + main #cat_all, #cat_tegneserie, #cat_husflid{
-    display: none;
-}
+#gridArea {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 310px);
+    justify-content: center;
+  }
 
+  

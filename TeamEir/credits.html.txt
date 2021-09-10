@@ -1,3 +1,9 @@
+https://stackoverflow.com/questions/43129360/css-grid-wrapping
+grid control
+
+https://ux.stackexchange.com/questions/53911/what-is-the-smallest-screen-size-you-design-for
+310 px 
+
 https://commons.wikimedia.org/wiki/File:English_language.svg
 english language flag
 https://nl.m.wikipedia.org/wiki/Bestand:Flag_of_Norway.svg

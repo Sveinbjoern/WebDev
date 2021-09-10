@@ -34,12 +34,14 @@ body {
 
 /* Header text*/
 h1{
-	margin: 0%;
-	padding: 0%;
+	
 }
-a{
+header a, footer a{
 	text-decoration: none;
 	
+}
+main p {
+	color: white;
 }
 
 header a  h1{
@@ -49,7 +51,8 @@ header a  h1{
 	font-size: 2vw;
 	margin: 0px 5px;
 	/* padding: 0px; */
-	
+	margin: 0%;
+	padding: 0%;
 
 }
 footer a  h1{
@@ -59,7 +62,8 @@ footer a  h1{
 	font-size: 2vw;
 	margin: 0px 5px;
 	/* padding: 0px; */
-	
+	margin: 0%;
+	padding: 0%;
 
 }
 
@@ -138,10 +142,10 @@ footer{
 	background-color: ; */
 }
 
-.element img {
+.element > img {
 	object-fit: contain;
-	max-width: 500px;
-	max-height: 500px;
+	max-width: 310px;
+	max-height: 310px;
 }
 
 #modal {
@@ -187,26 +191,6 @@ background-color: #5139e4;
 
 
 	  /* Language Change */
-
-.English{
-	display: none;
-	/* color: violet; */
-}
-
-.Norsk{
-	display: block;
-	/* color: violet; */
-}
-
-#languageEN:checked ~ * .Norsk{
-	display: none;
-	
-}
-#languageEN:checked ~ * .English{
-	display: block;
-	
-}
-
 #flagNO{
 	display: block;
 	cursor: pointer;
@@ -215,6 +199,26 @@ background-color: #5139e4;
 #flagEN{
 	cursor: pointer;
 }
+.English{
+	display: none;
+	/* color: violet; */
+}
+
+.Norsk{
+	display: inline;
+	/* color: violet; */
+}
+
+#languageEN:checked ~ * .Norsk{
+	display: none;
+	
+}
+#languageEN:checked ~ * .English{
+	display: inline;
+	
+}
+
+
 
 /* #languageEN:checked + header  #flagNO{
 	display: none;

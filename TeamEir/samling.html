@@ -3,6 +3,7 @@
   <head>
     <script src="lib/p5.js"></script>
     <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/handlebars-v4.7.7.js"></script>
     <script src="scripts/helperFunctions.js"></script>
     <script src="scripts/P5sketch.js"></script>
     <title>TeamEir</title>
@@ -20,12 +21,16 @@
     <!-- Hidden elements -->
     <input type="checkbox" id="languageEN" style="display: none;"/>
     
-    <input type="radio" id="cat_type_all" name="category" style="display: none;">
-    <input type="radio" id="cat_type_tegneserie" name="category" style="display: none;">
-    <input type="radio" id="cat_type_husflid" name="category" style="display: none;">
-    <input type="radio" id="cat_type_utfoldelse" name="category" style="display: none;">
+    <input type="radio" id="cat_type_all" name="category" checked  style="display: none;" >
+    <input type="radio" id="cat_type_tegneserie" name="category"   style="display: none;" >
+    <input type="radio" id="cat_type_husflid" name="category"      style="display: none;" >
+    <input type="radio" id="cat_type_utfoldelse" name="category"   style="display: none;"  >
 
+  
     
+   
+
+
     <!-- <input
     style="display: none;"style="display: none;"
       type="checkbox"
@@ -56,8 +61,8 @@
         <!-- <div> -->
         
         <label for="languageEN">
-          <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO" class="Norsk"  /></label>
-          <label for="languageEN">
+          <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO" class="Norsk"  />
+          <!--</label> <label for="languageEN"> -->
           <img src="assets/img/40px-English_language.svg.png" id="flagEN"  class="English" /></label>
         
         <input type = "text" value = "search" id="searchbar"></input>
@@ -76,8 +81,9 @@
     <!-- category all -->
 <div id="cat_all">
 
-  <h2 class="Norsk">Kategori: alle</h2>
+  <h2 class="Norsk">Kategori: hele samlingen</h2>
   <h2 class="English">Current category: all</h2>
+  
     
     <h3 class="Norsk">Velg Kategori:</h3>
     <h3 class="English">Chose category:</h3>
@@ -85,26 +91,20 @@
     <!-- Categories to choose from -->
     <label for="cat_type_tegneserie" >
       <h3 class="Norsk">tegneserier</h3>
-    </label>
-    <label for="cat_type_tegneserie" >
       <h3 class="English">cartoons</h3>
     </label>
 
     <label for="cat_type_husflid" >
       <h3 class="Norsk">handicrafts</h3>
-    </label>
-    <label for="cat_type_husflid" >
       <h3 class="English">husflid</h3>
     </label>
 
     <label for="cat_type_utfoldelse" >
       <h3 class="Norsk">utfoldelse</h3>
-    </label>
-    <label for="cat_type_utfoldelse" >
       <h3 class="English">abstract</h3>
     </label>
     
-    <input type="number"> 
+    
 
     <h3 class="Norsk">Søk i samlingen vår:</h3>
     <h3 class="English">Serach our creations:</h3>
@@ -118,30 +118,133 @@
 
 <div id="cat_tegneserie">
 
+  <h2 class="Norsk">Kategori: tegneserie</h2>
+  <h2 class="English">Current category: cartoons</h2>
+  
+    <h3 class="Norsk">Velg Kategori:</h3>
+    <h3 class="English">Chose category:</h3>
 
+   <!-- Categories to choose from -->
+   <label for="cat_type_all" >
+    <h3 class="Norsk">Alle kategorier</h3>
+    <h3 class="English">All Categories</h3>
+  </label>
+  
+
+  <label for="cat_type_husflid" >
+    <h3 class="Norsk">handicrafts</h3>
+    <h3 class="English">husflid</h3>
+  </label>
+
+  <label for="cat_type_utfoldelse" >
+    <h3 class="Norsk">utfoldelse</h3>
+    <h3 class="English">abstract</h3>
+  </label>
+    
+    
+
+    <h3 class="Norsk">Søk i tegneserie:</h3>
+    <h3 class="English">Serach our cartoons:</h3>
+
+    <input type="text">
 
 
 </div>
-<div id="cat_husfild"></div>
-<div id="cat_"></div>
+<div id="cat_husflid">
+  <h2 class="Norsk">Kategori: huslfid</h2>
+  <h2 class="English">Current category: handicrafts</h2>
+  
+    <h3 class="Norsk">Velg Kategori:</h3>
+    <h3 class="English">Chose category:</h3>
 
-<div id="flexArea">
+    <!-- Categories to choose from -->
+    <label for="cat_type_all" >
+      <h3 class="Norsk">Alle kategorier</h3>
+      <h3 class="English">All Categories</h3>
+    </label>
+     <label for="cat_type_tegneserie" >
+      <h3 class="Norsk">tegneserier</h3>
+      <h3 class="English">cartoons</h3>
+    </label>
+  
+    <label for="cat_type_utfoldelse" >
+      <h3 class="Norsk">utfoldelse</h3>
+      <h3 class="English">abstract</h3>
+    </label>
+    
+    
+
+    <h3 class="Norsk">Søk i husflid:</h3>
+    <h3 class="English">Serach our handicrafts:</h3>
+
+    <input type="text">
+
+</div>
+<div id="cat_utfoldelse">
+  
+  
+  <h2 class="Norsk">Kategori: utefoldelse</h2>
+  <h2 class="English">Current category: abstract</h2>
+
+    <br>
+    
+    <h3 class="Norsk"  >Søk i utfoldelse:</h3>
+    <h3 class="English" >Search our abstract pieces:</h3>
+  
+    <input type="text">
+</div>
+
+<div id="gridArea">
+
+    <script>
+      let gridDisplayTemplate = `
+      {{#each object}}
+        <div>
+        <h3> {{{this.name}}}</h3>
+        <img scr = {{{this.image}}}>
+        <p> {{{this.flavourText}}} </p>
+        </div>
+      {{/each}} `
+        // console.log("runnin")
+      gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
+      
+
+    </script>
 
 
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 1liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 2liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/husflid/brikker/406B040FA9AF45C986BA8C986A7BA7E2.jpg">
-</div>
+    <div class= "element">
+      <h3>BlogBlalballa</h3>
+      <img src="assets/img/1.fargeoversiktRmotRo.jpg">
+      <p>FLAavosnvaosnfva asoidfhj asghakjg sdkfgjhs dflgjksdh fgsdjfhg
+        .jkfagnh skjgfakjgfhsd lkfjgh sdfgk søfg sdlkgjsdfg skjgfakjgfhsd 
+        al gkjsdg lakjghdfgskdjfgnsdobodib afibonadban'dfband'fbnadb
+        bnadfgandfngbadonfbalodfnbæl sadfnblsdngbælsndgæbljsfgnb
+      </p>
+    </div>
+    <div class= "element">
+      <h3>BlogBlalballa</h3>
+      <img src="assets/img/37085134_10155402451286927_4589019045054906368_n.jpg">
+      <p>FLAavosnvaosnfva asoidfhj asghakjg sdkfgjhs dflgjksdh fgsdjfhg
+        .jkfagnh skjgfakjgfhsd lkfjgh sdfgk søfg sdlkgjsdfg skjgfakjgfhsd 
+        al gkjsdg lakjghdfgskdjfgnsdobodib afibonadban'dfband'fbnadb
+        bnadfgandfngbadonfbalodfnbæl sadfnblsdngbælsndgæbljsfgnb
+      </p>
+    </div>
+    <div class= "element">
+      <h3>BlogBlalballa</h3>
+      <img src="assets/img/unnamed.jpg">
+      <p>FLAavosnvaosnfva asoidfhj asghakjg sdkfgjhs dflgjksdh fgsdjfhg
+        .jkfagnh skjgfakjgfhsd lkfjgh sdfgk søfg sdlkgjsdfg skjgfakjgfhsd 
+        al gkjsdg lakjghdfgskdjfgnsdobodib afibonadban'dfband'fbnadb
+        bnadfgandfngbadonfbalodfnbæl sadfnblsdngbælsndgæbljsfgnb
+      </p>
+    </div>
 
-</div>
+  </div>
+
+
+
+
 
 
     </main>
