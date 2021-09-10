@@ -1,3 +1,8 @@
+https://commons.wikimedia.org/wiki/File:English_language.svg
+english language flag
+https://nl.m.wikipedia.org/wiki/Bestand:Flag_of_Norway.svg
+norwegian flag
+
 Pure css image carousel adapted from https://css-tricks.com/css-only-carousel/
 
 

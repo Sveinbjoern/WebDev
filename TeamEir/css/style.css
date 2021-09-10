@@ -1,7 +1,7 @@
 /* Page wide css */
 *{
 	box-sizing: border-box;
-  text-align: center;
+  	text-align: center;
 }
 html,
 body {
@@ -10,24 +10,10 @@ body {
   
 }
 
-.English{
-	display: block;
-	color: violet;
-}
 
-.Norsk{
-	
-	color: violet;
-}
 
-/* Language Change */
-#language_EN:checked ~ .English {
-	display:inline;
-}
 
-#language_EN:checked ~ .Norsk {
-	display: none;
-}
+
 
 
 /* Hidden elements css */
@@ -36,18 +22,42 @@ body {
   margin: ;
 } */
 
-/* Header text*/
 
-h1 a{
+
+
+
+/* Depends on screen width */
+
+/* Header text*/
+h1{
+	margin: 0%;
+	padding: 0%;
+}
+
+a  h1{
 	text-emphasis: bold;
 	text-decoration: none;
 	color: white;
 	font-size: 1.5vw;
+	margin: 0px 5px;
+	/* padding: 0px; */
+	
+
 }
 
-#mainLogo a{
 
-}
+
+ /* h1 + #flag {
+	text-emphasis: bold;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5vw;
+} */
+
+/* #mainLogo a{
+
+} */
+
 /* header {
 
 	
@@ -57,7 +67,7 @@ header,footer{
 	/* grid-area: header; */
 	display: flex;
 	/* flex-direction: row; */
-
+	align-items: center;
 	justify-content: space-between;
 	background-color: #5139e4;
 	width: 100%;
@@ -73,13 +83,15 @@ header,footer{
 .header {
   background-color: #999;
 } */ 
-input { 
+#searchbar { 
 	
+	display: block;
 	
 	width: 300px;
-	
+	line-height: normal;
+	height: fit-content;
 	text-align: left;
-	font-size: xx-large;
+	font-size: large;
 	
  font-family: "Comic Sans MS", "Comic Sans";
  
@@ -98,12 +110,15 @@ input {
 	background-color: ; */
 }
 
-img {
+.element img {
 	object-fit: contain;
 	max-width: 500px;
 	max-height: 500px;
 }
 
+#modal {
+ display: none;
+}
 /* Grid */
 
 	main {
@@ -133,3 +148,42 @@ background-color: #5139e4;
 		text-align: center;
 		
 	  } */
+
+
+
+
+	  /* Language Change */
+
+.English{
+	display: none;
+	/* color: violet; */
+}
+
+.Norsk{
+	display: block;
+	/* color: violet; */
+}
+
+#languageEN:checked ~ * .Norsk{
+	display: none;
+	
+}
+#languageEN:checked ~ * .English{
+	display: block;
+	
+}
+
+#flagNO{
+	display: block;
+}
+
+#flagEN{
+	display: none;
+}
+
+#languageEN:checked + header > label >  #flagNO{
+	display: none;
+}
+#languageEN:checked + header > label >  #flagEN{
+	display: block;
+}
