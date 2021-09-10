@@ -9,7 +9,9 @@ let keyCodes = {
 }
 
 let update = false;
+
 let tabVal = {
+	
 	tabBottom: -10, //set in setup
 	tabHeight: -50, //set in setup
 	tabWidth: 220,

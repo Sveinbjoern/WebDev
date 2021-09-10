@@ -2,39 +2,6 @@
 //amnd the helper functions
 
 
-let currentTab = 0
-
-let keyCodes = {
-	R: 82,
-}
-
-let update = false;
-let tabVal = {
-	tabBottom: -10, //set in setup
-	tabHeight: -50, //set in setup
-	tabWidth: 220,
-	tabNarrow: 30,
-
-	start: 100,
-	distance: 20, //set in setup
-
-	tabText: {
-		hoved: "Hoved",
-		skapelse: "Skapelse",
-		blogg: "Inspirasjons-Blogg",
-	},
-
-	tabColor: [], //set in setup
-	tabStarts: [],//set in setup
-
-
-} 
-
-let colors = {}; // made in setup
-
-
-const soundeffects = {};
-
 
 function preload() {
 
