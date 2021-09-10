@@ -3,10 +3,12 @@
   <head>
     <script src="lib/p5.js"></script>
     <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="scripts/helperFunctions.js"></script>
     <script src="scripts/P5sketch.js"></script>
     <title>TeamEir</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleSamling.css" />
   </head>
   
 
@@ -18,6 +20,10 @@
     <!-- Hidden elements -->
     <input type="checkbox" id="languageEN" style="display: none;"/>
     
+    <input type="radio" id="cat_type_all" name="category" style="display: none;">
+    <input type="radio" id="cat_type_tegneserie" name="category" style="display: none;">
+    <input type="radio" id="cat_type_husflid" name="category" style="display: none;">
+    <input type="radio" id="cat_type_utfoldelse" name="category" style="display: none;">
 
     
     <!-- <input
@@ -30,35 +36,35 @@
       <input type="radio" id="canvasMode" name="mode" value="canvasMode" style="none" /> -->
   
 
-    <header>
+      <header>
       
       
-      <h1 id="mainLogo" title="To index.html"><a href="index.html">TEAM EIR</h1></a>
-      <!-- <h1 title="Til index.html">       <a             class="Norsk"     href="index.html">     HJEM</h1></a> -->
-      <a href="index.html">      <h1 title="Til index.html"     class="Norsk"  >    HJEM</h1></a>
-      <a href="index.html">      <h1 title="To index.html"      class="English">    HOME</h1></a>
-      <a href="samling.html">      <h1 title="Til samling.html" class="Norsk"  >    SAMLING</h1></a>
-      <a href="samling.html">   <h1 title="To creations"        class="English">    CREATIONS</h1></a>
-      <a href="blogg.html">      <h1 title="Til blogg.html"     class="Norsk"  >    BLOGG</h1></a>
-      <a href="blogg.html"><h1 title="To blog"                  class="English">    BLOG</h1></a>
-      <a href="kreativ.html">      <h1 title="Til kreativ.html" class="Norsk"  >    DET KREATIVE INTERNET</h1></a>
-      <a href="kreativ.html"> <h1 title="To creative internet"  class="English">    THE CREATIVE INTERNET</h1></a>
-      <a href="omOss.html">      <h1 title="Til omOss.html"     class="Norsk"  >    OM OSS</h1></a>
-      <a href="omOss.html">   <h1 title="To aboutUs"            class="English">    ABOUT US</h1></a>
-
-      <!-- style="display: none;" style="display: none;"-->
-      <!-- <div> -->
-      
-      <label for="languageEN">
-        <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO"  /></label>
+        <a href="index.html"><h1 id="mainLogo" title="To index.html">TEAM EIR</h1></a>
+        <!-- <h1 title="Til index.html">       <a             class="Norsk"     href="index.html">     HJEM</h1></a> -->
+        <a href="index.html">      <h1 title="Til index.html"     class="Norsk"  >    HJEM</h1></a>
+        <a href="index.html">      <h1 title="To index.html"      class="English">    HOME</h1></a>
+        <a href="samling.html">      <h1 title="Til samling.html" class="Norsk"  >    SAMLING</h1></a>
+        <a href="samling.html">   <h1 title="To creations"        class="English">    CREATIONS</h1></a>
+        <a href="blogg.html">      <h1 title="Til blogg.html"     class="Norsk"  >    BLOGG</h1></a>
+        <a href="blogg.html"><h1 title="To blog"                  class="English">    BLOG</h1></a>
+        <a href="butikk.html">      <h1 title="Til butikk.html"   class="Norsk"  >    BUTIKK</h1></a>
+        <a href="butikk.html"> <h1 title="To shop"                class="English">    SHOP</h1></a>
+        <a href="omOss.html">      <h1 title="Til omOss.html"     class="Norsk"  >    OM OSS</h1></a>
+        <a href="omOss.html">   <h1 title="To aboutUs"            class="English">    ABOUT US</h1></a>
+  
+        <!-- style="display: none;" style="display: none;"-->
+        <!-- <div> -->
+        
         <label for="languageEN">
-        <img src="assets/img/40px-English_language.svg.png" id="flagEN"  /></label>
-      
-      <input type = "text" value = "search" id="searchbar"></input>
-      <!-- </div> -->
-
-
-    </header>
+          <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO" class="Norsk"  /></label>
+          <label for="languageEN">
+          <img src="assets/img/40px-English_language.svg.png" id="flagEN"  class="English" /></label>
+        
+        <input type = "text" value = "search" id="searchbar"></input>
+        <!-- </div> -->
+  
+  
+      </header>
 
 
     
@@ -67,6 +73,59 @@
 
   <main>
 
+    <!-- category all -->
+<div id="cat_all">
+
+  <h2 class="Norsk">Kategori: alle</h2>
+  <h2 class="English">Current category: all</h2>
+    
+    <h3 class="Norsk">Velg Kategori:</h3>
+    <h3 class="English">Chose category:</h3>
+
+    <!-- Categories to choose from -->
+    <label for="cat_type_tegneserie" >
+      <h3 class="Norsk">tegneserier</h3>
+    </label>
+    <label for="cat_type_tegneserie" >
+      <h3 class="English">cartoons</h3>
+    </label>
+
+    <label for="cat_type_husflid" >
+      <h3 class="Norsk">handicrafts</h3>
+    </label>
+    <label for="cat_type_husflid" >
+      <h3 class="English">husflid</h3>
+    </label>
+
+    <label for="cat_type_utfoldelse" >
+      <h3 class="Norsk">utfoldelse</h3>
+    </label>
+    <label for="cat_type_utfoldelse" >
+      <h3 class="English">abstract</h3>
+    </label>
+    
+    <input type="number"> 
+
+    <h3 class="Norsk">Søk i samlingen vår:</h3>
+    <h3 class="English">Serach our creations:</h3>
+
+    <input type="text">
+
+
+</div>
+
+
+
+<div id="cat_tegneserie">
+
+
+
+
+</div>
+<div id="cat_husfild"></div>
+<div id="cat_"></div>
+
+<div id="flexArea">
 
 
 <div class= "element">
@@ -81,55 +140,8 @@
   <h1>BlogBlalballa</h1>
   <img src="assets/pics/husflid/brikker/406B040FA9AF45C986BA8C986A7BA7E2.jpg">
 </div>
-<!-- <div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 3liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/husflid/brikker/503875BC5C274C8FA29F9FF1DB6888D2.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/husflid/brikker/72C5FDC864AE4DFEA91886549373FD3F.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/husflid/A3F801EFE3694AEE8D368CE20C9D550A (1).jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 4liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/husflid/A3F801EFE3694AEE8D368CE20C9D550A.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegning/001liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 5liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegning/002liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegning/Bunnyrabit Rust.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegneserie/indre/indre 6liten.jpg">
-</div>
-<div class= "element">
-  <h1>BlogBlalballa</h1>
-  <img src="assets/pics/tegning/Drageengel 5.jpg">
-</div> -->
 
+</div>
 
 
     </main>
@@ -138,14 +150,28 @@
     <footer>
 
 
-      <h3>LOGO</h3>
-      <h3>KONTAKT OSS</h3>
-      <h3>OM OSS</h3>
-      <h3><a href="painter.html">PAINTER</a></h3>
+      <a href="index.html"><h1 id="mainLogo" title="To index.html">TEAM EIR</h1></a>
+      <!-- <h1 title="Til index.html">       <a             class="Norsk"     href="index.html">     HJEM</h1></a> -->
+      <a href="index.html">      <h1 title="Til index.html"     class="Norsk"  >    HJEM</h1></a>
+      <a href="index.html">      <h1 title="To index.html"      class="English">    HOME</h1></a>
+      <a href="samling.html">      <h1 title="Til samling.html" class="Norsk"  >    SAMLING</h1></a>
+      <a href="samling.html">   <h1 title="To creations"        class="English">    CREATIONS</h1></a>
+      <a href="blogg.html">      <h1 title="Til blogg.html"     class="Norsk"  >    BLOGG</h1></a>
+      <a href="blogg.html"><h1 title="To blog"                  class="English">    BLOG</h1></a>
+      <a href="butikk.html">      <h1 title="Til butikk.html"   class="Norsk"  >    BUTIKK</h1></a>
+      <a href="butikk.html"> <h1 title="To shop"                class="English">    SHOP</h1></a>
+      <a href="omOss.html">      <h1 title="Til omOss.html"     class="Norsk"  >    OM OSS</h1></a>
+      <a href="omOss.html">   <h1 title="To aboutUs"            class="English">    ABOUT US</h1></a>
+
+      <!-- style="display: none;" style="display: none;"-->
       <!-- <div> -->
-      <h3>Språk</h3>
       
-      <input type="text"> </input>
+      <label for="languageEN">
+        <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO" class="Norsk" /></label>
+        <label for="languageEN">
+        <img src="assets/img/40px-English_language.svg.png" id="flagEN" class="English" /></label>
+         
+   
 
     </footer>
 

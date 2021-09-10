@@ -1,0 +1,59 @@
+/* CSS  exclusive for samling.html */
+
+main > #cat_all{
+
+	display: flex;
+flex-wrap: wrap;
+
+background-color: #5139e4;
+}
+
+main > #cat_tegneserie{
+	display: flex;
+flex-wrap: wrap;
+
+background-color: #4b0082;
+}
+main > #cat_husflid{
+	display: flex;
+flex-wrap: wrap;
+
+background-color:  #ad9223;
+}
+main > #cat_utfoldelse{
+	display: flex;
+flex-wrap: wrap;
+
+background-color: #5139e4;
+}
+
+
+
+#cat_type_all:checked + main #cat_all{
+    display: flex;
+}
+#cat_type_all:checked + main #cat_tegneserie, #cat_husflid, #cat_utfoldelse{
+    display: none;
+}
+
+#cat_type_tegneserie:checked + main #cat_tegneserie{
+    display: flex;
+}
+#cat_type_tegneserie:checked + main #cat_all, #cat_husflid, #cat_utfoldelse{
+    display: none;
+}
+
+#cat_type_husflid:checked + main #cat_husflid{
+    display: flex;
+}
+#cat_type_husflid:checked + main #cat_all, #cat_tegneserie, #cat_utfoldelse{
+    display: none;
+}
+
+#cat_type_utfoldelse:checked + main #cat_utfoldelse{
+    display: flex;
+}
+#cat_type_utfoldelse:checked + main #cat_all, #cat_tegneserie, #cat_husflid{
+    display: none;
+}
+

@@ -37,17 +37,32 @@ h1{
 	margin: 0%;
 	padding: 0%;
 }
+a{
+	text-decoration: none;
+	
+}
 
-a  h1{
+header a  h1{
 	text-emphasis: bold;
 	text-decoration: none;
 	color: white;
-	font-size: 1.5vw;
+	font-size: 2vw;
 	margin: 0px 5px;
 	/* padding: 0px; */
 	
 
 }
+footer a  h1{
+	text-emphasis: bold;
+	text-decoration: none;
+	color: white;
+	font-size: 2vw;
+	margin: 0px 5px;
+	/* padding: 0px; */
+	
+
+}
+
 
 
 
@@ -67,7 +82,7 @@ a  h1{
 	
 
 } */
-header,footer{
+header{
 	/* grid-area: header; */
 	display: flex;
 	/* flex-direction: row; */
@@ -78,6 +93,15 @@ header,footer{
 
 
 	
+}
+
+footer{
+	display: flex;
+	/* flex-direction: row; */
+	align-items: center;
+	justify-content: space-around;
+	background-color: #5139e4;
+	width: 100%;	
 }
 
 /* .header {
@@ -125,12 +149,18 @@ header,footer{
 }
 /* Grid */
 
+main > #flexArea{
+	display: flex;
+flex-wrap: wrap;
+
+background-color: #5139e4;
+}
+
+
+
 	main {
 
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-background-color: #5139e4;
+	justify-content: center;
 
 
 	/* display: grid; */
@@ -179,15 +209,17 @@ background-color: #5139e4;
 
 #flagNO{
 	display: block;
+	cursor: pointer;
 }
 
 #flagEN{
-	display: none;
+	cursor: pointer;
 }
 
-#languageEN:checked + header > label >  #flagNO{
+/* #languageEN:checked + header  #flagNO{
 	display: none;
 }
-#languageEN:checked + header > label >  #flagEN{
+#languageEN:checked + header #flagEN{
 	display: block;
-}
+	cursor: pointer;
+} */
