@@ -28,7 +28,9 @@ let tabVal = {
 
 	tabColor: [], //set in setup
 	tabStarts: [],//set in setup
-
+	caluclateWidth: function (){
+		
+	}
 
 } 
 
@@ -87,6 +89,7 @@ function draw() {
 
 	if (update)
 	{
+		tabVal.caluclateWidth();
 		drawTabs();
 		update = false;
 	}

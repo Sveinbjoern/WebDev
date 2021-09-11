@@ -41,13 +41,13 @@ header a, footer a{
 	
 }
 main p {
-	color: white;
+	color: black;
 }
 
 header a  h1{
 	text-emphasis: bold;
 	text-decoration: none;
-	color: white;
+	color: black;
 	font-size: 2vw;
 	margin: 0px 5px;
 	/* padding: 0px; */
@@ -58,7 +58,7 @@ header a  h1{
 footer a  h1{
 	text-emphasis: bold;
 	text-decoration: none;
-	color: white;
+	color: black;
 	font-size: 2vw;
 	margin: 0px 5px;
 	/* padding: 0px; */
@@ -92,19 +92,21 @@ header{
 	/* flex-direction: row; */
 	align-items: center;
 	justify-content: space-between;
-	background-color: #5139e4;
+	background-color: #a79de4;
 	width: 100%;
 
 
 	
 }
 
+/* #5139e4 */
+
 footer{
 	display: flex;
 	/* flex-direction: row; */
 	align-items: center;
 	justify-content: space-around;
-	background-color: #5139e4;
+	background-color:	#a79de4;
 	width: 100%;	
 }
 
@@ -157,7 +159,7 @@ main > #flexArea{
 	display: flex;
 flex-wrap: wrap;
 
-background-color: #5139e4;
+background-color: #a79de4;
 }
 
 
@@ -192,12 +194,13 @@ background-color: #5139e4;
 
 	  /* Language Change */
 #flagNO{
-	display: block;
+	
 	cursor: pointer;
 }
 
 #flagEN{
 	cursor: pointer;
+	display: block;
 }
 .English{
 	display: none;
