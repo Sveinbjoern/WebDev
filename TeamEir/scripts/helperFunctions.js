@@ -38,3 +38,8 @@ function fitToScreen(){
     update = true;
     
    }
+
+
+function createSamlingData () {
+	
+}

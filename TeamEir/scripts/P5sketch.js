@@ -12,14 +12,17 @@ let update = false;
 let tabVal = {
 	amount: 4,
 
-	tabBottom: -5, //set in setup
-	tabHeight: -50, //set in setup
+	tabBottomBase: -5,
+	tabBottom: 0, //set in setup
+	tabHeightBase: -50,
+	tabHeight: 0, //set in setup
 	tabWidth: 220,
 	tabNarrow: 30,
 	
 
 	start: 100,
-	distance: 20, //set in setup
+	distanceBase: 20,
+	distance: 0, //set in setup
 
 	tabText: {
 		hoved: "Hoved",
@@ -31,13 +34,13 @@ let tabVal = {
 	tabStarts: [],//set in setup
 
 	setup: function (){
-		tabVal.tabBottom += height;
-		tabVal.tabHeight = tabVal.tabHeight + tabVal.tabBottom;
-		tabVal.distance += tabVal.tabWidth;
-		tabVal.tabColor = [colors.blue, colors.indigo, colors.satinSheenGold ];
-		for (let i = 0; i < tabVal.amount; i++)
+		this.tabBottom = height + this.tabBottomBase;
+		this.tabHeight = this.tabHeightBase + this.tabBottom;
+		this.distance = this.tabWidth + this.distanceBase;
+		this.tabColor = [colors.blue, colors.indigo, colors.satinSheenGold ];
+		for (let i = 0; i < this.amount; i++)
 		{
-			tabVal.tabStarts.push(tabVal.start + tabVal.distance * i);
+			this.tabStarts.push(this.start + this.distance * i);
 		}
 		
 	}
@@ -92,62 +95,33 @@ function setup() {
 
 	gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
 	
-	var template = Handlebars.compile(`Handlebars
-	 <b>{{doesWhat}}
-	 
-	 </b>`);
-	console.log(gridDisplayTemplate({
-		object: [
-		  {
-			name:'"Yehuda Katz"',
-			image: '"imgstring1"',
-			flavourText: '"ERFGSDGHSHFASDFGD"',
-			  }
-		  
-		 
-		], 
-		 
-	  }));
+	
 	  let elem = document.getElementById("gridArea")
-	  elem.append($(gridDisplayTemplate({
-		object: [
-		  {
-			name:'"Yehuda Katz"',
-			image: `assets/img/1.fargeoversiktRmotRo.jpg`,
-			flavourText: '"ERFGSDGHSHFASDFGD"',
-			  }
-		  
-		 
-		], 
-		 
-	  }) )[0] )
-	console.log(template({ doesWhat: "rocks!"}));
-
-
-	// console.log($(gridDisplayTemplate({
+	//   elem.append($(gridDisplayTemplate({
 	// 	object: [
 	// 	  {
 	// 		name:'"Yehuda Katz"',
-	// 		image: '"imgstring1"',//`assets/img/1.fargeoversiktRmotRo.jpg`
+	// 		image: `assets/img/1.fargeoversiktRmotRo.jpg`,
 	// 		flavourText: '"ERFGSDGHSHFASDFGD"',
 	// 		  }
 		  
 		 
 	// 	], 
 		 
-	//   }) )[0])
-  	// execute the compiled template and print the output to the console
-  	
+	//   }) )[0] )
+
+	  console.log($(gridDisplayTemplate(myDatabase.getSamlingObject([0])))[2])
+	  elem.append($(gridDisplayTemplate(myDatabase.getSamlingObject([0])))[0])
+	  elem.append($(gridDisplayTemplate(myDatabase.getSamlingObject([0])))[2])
+
+
+	
+
+
 
 }
 
 function draw() {
-	// console.log("draw ")
-	
-	//call the draw function from the selected tool.
-	//hasOwnProperty is a javascript function that tests
-	//if an object contains a particular method or property
-	//if there isn't a draw method the app will alert the user
 
 	if (update)
 	{

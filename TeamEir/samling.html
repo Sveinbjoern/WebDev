@@ -108,7 +108,7 @@
 
       <h2 class="Norsk">Kategori: hele samlingen</h2>
       <h2 class="English">Current category: all</h2>
-
+      <br>
       <h3 class="Norsk">Søk i samlingen vår:</h3>
       <h3 class="English">Serach our creations:</h3>
 
@@ -125,7 +125,7 @@
       <h2 class="English">Current category: cartoons</h2>
 
 
-
+      <br>
 
 
       <h3 class="Norsk">Søk i tegneserie:</h3>
@@ -136,10 +136,10 @@
 
     </div>
     <div id="cat_husflid">
-      <h2 class="Norsk">Kategori: huslfid</h2>
+      <h2 class="Norsk">Kategori: husflid</h2>
       <h2 class="English">Current category: handicrafts</h2>
 
-
+      <br>
 
 
 
@@ -169,11 +169,17 @@
       <script>
         let gridDisplayTemplate = `
       {{#each object}}
-        <div class = "element">
+        <div class = "element English">
         <h3> {{{this.name}}}</h3>
         <img src = {{{this.image}}}>
         <p> {{{this.flavourText}}} </p>
         </div>
+        <div class = "element Norsk">
+        <h3> {{{this.navn}}}</h3>
+        <img src = {{{this.image}}}>
+        <p> {{{this.innholdsTekst}}} </p>
+        </div>
+        
       {{/each}} `
       </script>
 
