@@ -89,6 +89,8 @@ function setup() {
 	
 	//create the drawManager
 	drawTabs();
+
+	gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
 	
 	var template = Handlebars.compile(`Handlebars
 	 <b>{{doesWhat}}
@@ -111,29 +113,29 @@ function setup() {
 		object: [
 		  {
 			name:'"Yehuda Katz"',
-			image: '"imgstring1"',
+			image: `assets/img/1.fargeoversiktRmotRo.jpg`,
 			flavourText: '"ERFGSDGHSHFASDFGD"',
 			  }
 		  
 		 
 		], 
 		 
-	  }) ) )
+	  }) )[0] )
 	console.log(template({ doesWhat: "rocks!"}));
 
 
-	console.log($(gridDisplayTemplate({
-		object: [
-		  {
-			name:'"Yehuda Katz"',
-			image: '"imgstring1"',
-			flavourText: '"ERFGSDGHSHFASDFGD"',
-			  }
+	// console.log($(gridDisplayTemplate({
+	// 	object: [
+	// 	  {
+	// 		name:'"Yehuda Katz"',
+	// 		image: '"imgstring1"',//`assets/img/1.fargeoversiktRmotRo.jpg`
+	// 		flavourText: '"ERFGSDGHSHFASDFGD"',
+	// 		  }
 		  
 		 
-		], 
+	// 	], 
 		 
-	  }) ))
+	//   }) )[0])
   	// execute the compiled template and print the output to the console
   	
 

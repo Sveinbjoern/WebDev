@@ -1,3 +1,45 @@
+11.09.2021
+
+ <h3 class="Norsk">Velg Kategori:</h3>
+    <h3 class="English">Chose category:</h3>
+
+   <!-- Categories to choose from -->
+   <label for="cat_type_all" >
+    <h3 class="Norsk">Alle kategorier</h3>
+    <h3 class="English">All Categories</h3>
+  </label>
+  
+
+  <label for="cat_type_husflid" >
+    <h3 class="Norsk">handicrafts</h3>
+    <h3 class="English">husflid</h3>
+  </label>
+
+  <label for="cat_type_utfoldelse" >
+    <h3 class="Norsk">utfoldelse</h3>
+    <h3 class="English">abstract</h3>
+  </label>
+
+<h3 class="Norsk">Velg Kategori:</h3>
+    <h3 class="English">Chose category:</h3>
+
+    <!-- Categories to choose from -->
+    <label for="cat_type_all" >
+      <h3 class="Norsk">Alle kategorier</h3>
+      <h3 class="English">All Categories</h3>
+    </label>
+     <label for="cat_type_tegneserie" >
+      <h3 class="Norsk">tegneserier</h3>
+      <h3 class="English">cartoons</h3>
+    </label>
+  
+    <label for="cat_type_utfoldelse" >
+      <h3 class="Norsk">utfoldelse</h3>
+      <h3 class="English">abstract</h3>
+    </label>
+
+
+
 21.08.2021
 
  let element = document.getElementById("strokeWeightInput");
