@@ -218,6 +218,9 @@ function keyPressed(){
 
 		}
 
+		elem = document.getElementById("gridArea")
+		removeChildren(elem)
+
 	
 		// elem = document.getElementsByClassName("English")
 

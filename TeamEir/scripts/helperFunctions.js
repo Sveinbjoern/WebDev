@@ -28,6 +28,12 @@ function drawTab(startingX, color){
 	// console.log("logging drawTab", startingX, tabVal.tabBottom, tabVal.tabHeight )
 }
 
+function removeChildren (elem) {
+	while (elem.firstChild) {
+		elem.removeChild(myNode.lastChild);
+	  }
+}
+
 function fitToScreen(){
     console.log("fitToScreen");
     
