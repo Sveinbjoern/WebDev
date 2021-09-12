@@ -58,9 +58,6 @@ tabVal = {
 			this.tabStarts.push(this.start + this.distance * i);
 		}
 
-		document.getElementById("languageEN").addEventListener('change', () => {
-			update = true;
-		  });
 		
 	},
 	calculateWidth: function() {
@@ -114,7 +111,25 @@ function setup() {
 	var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
 	c.parent('p5canvas');
 
-	
+	//create eventlistener that saves the language choice to localStorage
+	let elem = document.getElementById("languageEN")
+	elem.addEventListener('change', () => {
+		// console.log("eventlister working", elem.checked,JSON.stringify(elem.checked))
+		window.localStorage.setItem("English", JSON.stringify(elem.checked))
+		update = true;
+	  });
+
+	//load from localStorge your language settings
+	let set = window.localStorage.getItem("English")
+	// console.log(set)
+  	if (set)
+	{
+		
+	  elem.checked = JSON.parse(set);
+
+	} 
+
+
 	// background(255);
 	
 	colors.setup()
@@ -128,17 +143,8 @@ function setup() {
 	gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
 	
 	
-	  
-	//   elem.append($(gridDisplayTemplate({
-	// 	object: [
-	// 	  {
-	// 		name:'"Yehuda Katz"',
-	// 		image: `assets/img/1.fargeoversiktRmotRo.jpg`,
-	// 		flavourText: '"ERFGSDGHSHFASDFGD"',
-	// 		  }
-		  
-		 
-	// 	], 
+
+	 
 	createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}])
 		 
 	 

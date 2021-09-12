@@ -11,7 +11,7 @@
   <title>TeamEir</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/styleSamling.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleButikk.css" />
 </head>
 
 
@@ -23,11 +23,9 @@
   <!-- Hidden elements -->
   <input type="checkbox" id="languageEN" style="display: none;" />
 
-  <input type="radio" id="cat_type_all" name="category" checked style="display: none;">
-  <input type="radio" id="cat_type_tegneserie" name="category" style="display: none;">
-  <input type="radio" id="cat_type_husflid" name="category" style="display: none;">
-  <input type="radio" id="cat_type_utfoldelse" name="category" style="display: none;">
-
+  <input type="radio" id="cat_kurs" name="category" checked style="display: none;">
+  <input type="radio" id="cat_varer" name="category" style="display: none;">
+  
 
 
 
@@ -104,86 +102,159 @@
   <main>
 
     <!-- category all -->
-    <div id="cat_all">
+    <div id="kurs">
 
-      <h2 class="Norsk">Kategori: hele samlingen</h2>
-      <h2 class="English">Current category: all</h2>
-      <br>
-      <h3 class="Norsk">Søk i samlingen vår:</h3>
-      <h3 class="English">Serach our creations:</h3>
+      <h2 class="Norsk">Kategori: Kurs</h2>
+      <h2 class="English">Current category: Courses</h2>
 
-      <input type="text">
+      <div class="grid">
 
-
-    </div>
-
-
-
-    <div id="cat_tegneserie">
-
-      <h2 class="Norsk">Kategori: tegneserie</h2>
-      <h2 class="English">Current category: cartoons</h2>
-
-
-      <br>
-
-
-      <h3 class="Norsk">Søk i tegneserie:</h3>
-      <h3 class="English">Serach our cartoons:</h3>
-
-      <input type="text">
-
-
-    </div>
-    <div id="cat_husflid">
-      <h2 class="Norsk">Kategori: husflid</h2>
-      <h2 class="English">Current category: handicrafts</h2>
-
-      <br>
-
-
-
-      <h3 class="Norsk">Søk i husflid:</h3>
-      <h3 class="English">Serach our handicrafts:</h3>
-
-      <input type="text">
-
-    </div>
-    <div id="cat_utfoldelse">
-
-
-      <h2 class="Norsk">Kategori: utefoldelse</h2>
-      <h2 class="English">Current category: abstract</h2>
-
-      <br>
-
-      <h3 class="Norsk">Søk i utfoldelse:</h3>
-      <h3 class="English">Search our abstract pieces:</h3>
-
-      <input type="text">
-    </div>
-
-    <div id="gridArea">
-
-      <!-- handlebars template used to create all elements bellow -->
-      <script>
-        let gridDisplayTemplate = `
-      {{#each object}}
-        <div class = "element English">
-        <h3> {{{this.name}}}</h3>
-        <img src = {{{this.image}}}>
-        <p> {{{this.flavourText}}} </p>
+        <div class="item">
+          <h3 class="Norsk">Manga tegnekurs på nett</h3>
+          <h3 class="English">Manga drawing course online</h3>
+          <br>
+          <h3 class="Norsk">Kursholder: Sigrun</h3>
+          <h3 class="English">Course by Sigrun</h3>
+          <br><br>
+          <p class="Norsk">Vi starter opp med manga tegne kurs på nett. Sigrun har holdt på med tegning i 
+            mange år og kan vise teknikker som "Teknikker som du kan vise"<br>
+            <br>
+            pris: Ennå ikke satt<br>
+            <br>
+            Du har bruk for:<br>
+            Greier du har bruk for<br>
+            Greier du har bruk for<br>
+            Greier du har bruk for<br>
+            <br> 
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
         </div>
-        <div class = "element Norsk">
-        <h3> {{{this.navn}}}</h3>
-        <img src = {{{this.image}}}>
-        <p> {{{this.innholdsTekst}}} </p>
+        <div class="item">
+          <h3 class="Norsk">Manga tegnekurs hos oss</h3>
+          <h3 class="English">Manga drawing course in our home</h3>
+          <br>
+          <h3 class="Norsk">Kursholder: Sigrun</h3>
+          <h3 class="English">Course by Sigrun</h3>
+          <br><br>
+          <p class="Norsk">Til dere som bor på Østlandet og kan ta veien hjem til oss, starter vi opp med manga 
+            tegnekurs hjemme hos oss. Sigrun har holdt på med tegning i 
+            mange år og kan vise teknikker som "Teknikker som du kan vise"<br>
+            
+            <br>
+            pris: Ennå ikke satt<br>
+            
+            <br>
+            Du har bruk for:<br>
+            Greier du har bruk for<br>
+            Greier du har bruk for<br>
+            Greier du har bruk for<br>
+            <br>
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
         </div>
+
+        <div class="item">
+          <h3 class="Norsk">Kunsten å lage det du trenger av gjenbrukartikkler, hos oss</h3>
+          <h3 class="English">The art of making what you need from reued item at our home</h3>
+          <br>
+          <h3 class="Norsk">Kursholder: Gro-Mette</h3>
+          <h3 class="English">Course by Gro-Mette</h3>
+          <br><br>
+          <p class="Norsk">Til dere som bor på Østlandet og kan ta veien hjem til oss, starter vi opp med gjennbruks
+             kurs og idemyldrings gruppe hjemme hos oss. Gro-Mette vil gjerne ha flere kreative sjeler
+             som kan gjennsidig støtte og oppmuntre hverandre i gjennbruks skapearbeid.<br>
+            <br>
+            pris: Mange gode ideer<br>
+            <br>
+            Du har bruk for:<br>
+            -Evne til å idemyldre i lag<br>
+            -Troen på deg selv til å skape<br>
+            -Kunne gjøre research på nett<br>
+            <br> 
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
+        </div>
+      
+      </div>
+      
+    </div>
+
+
+
+    <div id="varer">
+
+      <h2 class="Norsk">Kategori: Varer</h2>
+      <h2 class="English">Current category: Goods</h2>
+
+      <div class="grid">
+
+        <div class="item">
+          <h3 class="Norsk">Vakre brikker laget med svijern</h3>
+          <h3 class="English">Beautiful wood pieces made with woodburner</h3>
+          <br>
+          <!-- images -->
+          <img src="assets/img/husflid/brikker/406B040FA9AF45C986BA8C986A7BA7E2.jpg" alt="An image of decorated wooden pieces fro sale">
+          <br><br>
+          <p class="Norsk">Fylt med mange forskjellige tema<br>
+            <br>
+            pris: Ennå ikke satt<br>
+           
+            <br> 
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
+        </div>
+
+
+        <div class="item">
+          <h3 class="Norsk">Høy oppløsning bilde fra vår samling</h3>
+          <h3 class="English">High resolution images from our collection</h3>
+          <br>
+            <!-- images -->
+            <img src="assets/img/tegneserie/tarrot/2yppersteprestinnen.jpg" alt="A re-imagening of the tarrot card the high priestess">
+          <br><br>
+          <p class="Norsk">Fylt med mangeforskjellige tema<br>
+            <br>
+            pris: Ennå ikke satt<br>
+           
+            <br> 
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
+        </div>
+
+
+        <div class="item">
+          <h3 class="Norsk">Trykk av et av våre bilder</h3>
+          <h3 class="English">Printouts of one of our images</h3>
+          <br>
+            <!-- images -->
+            <img src="assets/img/tegneserie/indre/indre7liten.jpg" alt="An image of the manga cartoon 'inner'">
+          <br><br>
+          pris: Ennå ikke satt<br>
+          <br>
+           
+            Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+          </p>
+          <p class="English"></p>
+        </div>
+
         
-      {{/each}} `
-      </script>
+      
+      
+      </div>
+
+
+      
+
 
     </div>
+    
+
+    
 
 
   </main>

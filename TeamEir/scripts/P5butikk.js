@@ -53,9 +53,7 @@ tabVal = {
 			this.tabStarts.push(this.start + this.distance * i);
 		}
 
-		document.getElementById("languageEN").addEventListener('change', () => {
-			update = true;
-		  });
+		
 		
 	},
 	calculateWidth: function() {
@@ -104,43 +102,43 @@ function setup() {
 	frameRate(25);
 	textAlign(CENTER,CENTER);
 
-	//create a canvas to fill the content div from index.html
-	canvasContainer = select('#p5canvas');
-	var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
-	c.parent('p5canvas');
+	
+	
+	let elem = document.getElementById("languageEN")
+	elem.addEventListener('change', () => {
+		// console.log("eventlister working", elem.checked,JSON.stringify(elem.checked))
+		window.localStorage.setItem("English", JSON.stringify(elem.checked))
+		update = true;
+	  });
 
+	//load from localStorge your language settings
+	let set = window.localStorage.getItem("English")
+	// console.log(set)
+  	if (set)
+	{
+		
+	  elem.checked = JSON.parse(set);
+
+	} 
 	
 	// background(255);
 	
-	colors.setup()
 	
+	//create a canvas to fill the content div from index.html
+	fitToScreen();
+
+	colors.setup()
 	tabVal.setup();
 
 	
 	//create the drawManager
 	drawTabs();
 
-	gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
+	//create eventlistener that saves the language choice to localStorage
 	
 	
-	  
-	//   elem.append($(gridDisplayTemplate({
-	// 	object: [
-	// 	  {
-	// 		name:'"Yehuda Katz"',
-	// 		image: `assets/img/1.fargeoversiktRmotRo.jpg`,
-	// 		flavourText: '"ERFGSDGHSHFASDFGD"',
-	// 		  }
-		  
-		 
-	// 	], 
-	createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}])
-		 
-	 
 
-	
-
-
+	// fitToScreen();
 
 }
 
@@ -162,68 +160,7 @@ function draw() {
 function keyPressed(){
 	if (keyCode === keyCodes.R)
 	{
-		// console.log("keycode R")
-		// let elem = document.getElementById("languageEN")
-		// // console.log(elem.checked)
-		// elem.checked = !elem.checked;
-		// // console.log(elem.value)
-
-		let next = false;
-		let changed = false;
-		elem = document.getElementById("cat_type_all")
-		// console.log(elem.checked)
-		if (elem.checked) {next = true}
-		elem = document.getElementById("cat_type_tegneserie")
-		if (next)
-		{
-			tabVal.currentTab = 1;
-			update = true;
-			elem.checked = true;
-			changed = true;
-			next = false;
-			console.log(elem)
-			
-		} else if(elem.checked) {next = true}
-
-		elem = document.getElementById("cat_type_husflid")
-		if (next)
-		{
-			tabVal.currentTab =2;
-			update = true;
-			elem.checked = true;
-			changed = true
-			next = false
-			console.log(elem)
-		} else if(elem.checked) {next = true}
-		elem = document.getElementById("cat_type_utfoldelse")
-		if (next)
-		{
-			tabVal.currentTab = 3;
-			update = true;
-			elem.checked = true;
-			changed = true
-			next =false
-			console.log(elem)
-		} else if(elem.checked) {next = true}
-
-		if (next || !changed)
-		{
-			tabVal.currentTab = 0;
-			update = true;
-			elem = document.getElementById("cat_type_all")
-			elem.checked = true;
-			console.log(elem)
-
-		}
-
-		elem = document.getElementById("gridArea")
-		removeChildren(elem)
-
-	
-		// elem = document.getElementsByClassName("English")
-
-		// elem.forEach(element => {
-		// 	element.style.display = "flex";
+		
 		// });
 	}
 }
@@ -237,19 +174,20 @@ function mousePressed(){
 		if (mouseX > tabVal.tabStarts[0]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[0] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			tabVal.currentTab = 0;
-			let elem = document.getElementById("cat_type_all");
+			let elem = document.getElementById("cat_kurs");
 			elem.checked = true;
 			
-			removeChildren(document.getElementById("gridArea"));
-			createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}]);
+			fitToScreen();
+			
 			update = true;
 		} else if (mouseX > tabVal.tabStarts[1]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[1] + tabVal.tabWidth - tabVal.tabNarrow)
 		{
 			tabVal.currentTab = 1;
-			let elem = document.getElementById("cat_type_tegneserie");
+			let elem = document.getElementById("cat_varer");
+			// console.log(elem.checked)
 			elem.checked = true;
-			removeChildren(document.getElementById("gridArea"));
-			createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]}]);
+			
+			fitToScreen();
 			update = true;
 		} 
 	}

@@ -1,0 +1,97 @@
+/* CSS  exclusive for samling.html */
+
+
+/* main  label {
+    cursor: pointer; 
+    margin: 0px, 10px;
+} */
+/* main > #cat_all{
+
+	
+
+
+}
+
+main > #cat_tegneserie{
+	
+    
+
+
+}
+main > #cat_husflid{
+
+
+}
+main > #cat_utfoldelse{
+
+
+
+} */
+
+main h2 {
+    margin: 0px;
+    color: black;
+    /* padding: 0px; */
+}
+main h3 {
+    
+    color: black;
+    /* padding: 0px; */
+}
+
+#cat_kurs:checked ~ main #kurs{
+    display: block;
+    background-color: #a79de4;
+}
+#cat_kurs:checked ~ main {
+    background-color: #a79de4;
+}
+#cat_kurs:not(:checked) ~ main #kurs{
+    display: none;
+}
+
+#cat_varer:checked ~ main #varer{
+    display: block;
+    background-color: #735b83;
+}
+#cat_varer:checked ~ main{
+    background-color: #735b83;
+}
+#cat_varer:not(:checked) ~ main #varer{
+    display: none;
+    
+}
+
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+  }
+
+  #varer img{
+      width: 100%;
+      height: auto;
+
+  }
+
+ #kurs .item:nth-child(odd)
+  {
+      background-color: #735b83;
+  }  
+ #kurs .item:nth-child(even)
+  {
+      background-color: #b3a676;
+  }  
+
+  #varer .item:nth-child(odd)
+  {
+      background-color: #a79de4;
+  }  
+ #varer .item:nth-child(even)
+  {
+      background-color: #b3a676;
+  }  
+
+  

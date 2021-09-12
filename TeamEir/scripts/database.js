@@ -1,11 +1,31 @@
 
 let myDatabase = {
-  samling:{ 
+  blogg: [
+    {
+        "navn": "Telys i filt",
+        "name": "Candles in felt",
+        "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
+        "author": "Gro-Mette",
+        "overskrift": "adbadfb",
+        "headLine": "Blabitiblab",
+        "innholdsTekst": "Pyntegjenstand laget med gjenbruksmaterialer",
+        "flavourText": "Decoration made with recyclable material",
+    },
+
+  ],
+
+  authorsImg: {
+      Sigrun:       "assets\\img\\omOss\\Sigrun.jpg",
+      GroMette:    "assets\\img\\omOss\\GM.jpg"
+  },
+  
+  
+    samling:{ 
       husflid: [
     JSON.stringify({
         "navn": "Telys i filt",
         "name": "Candles in felt",
-        "image": `"assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg"`,
+        "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
         "innholdsTekst": "Pyntegjenstand laget med gjenbruksmaterialer",
         "flavourText": "Decoration made with recyclable material",
     }),
@@ -192,13 +212,7 @@ let myDatabase = {
     ]
 
 },
-imageRef: {
-    husflid: {
-        
-    },
-    utfoldelse: "",
-    tegneserie: "",
-},
+
 
 images: {
     husflid: [
@@ -282,6 +296,42 @@ images: {
     ]
 
 },
+
+imageRef: {},
+
+    setupImageRef: function (){
+        this.imageRef.husflid = {
+            filtGjennbruk: this.images.husflid[0],
+            brikker: this.images.husflid[1],
+            skapbokser: this.images.husflid[2],
+            vases: this.images.husflid[3]
+        },
+        this.imageRef.utfoldelse = {
+            kobledePrikker: this.images.utfoldelse[0],
+            lysStrom: this.images.utfoldelse[1],
+            flekker: this.images.utfoldelse[2],
+            gulOgGronn: this.images.utfoldelse[3],
+            samarbeidsBilde: this.images.utfoldelse[4],
+            fargekart: this.images.utfoldelse[5],
+            green: this.images.utfoldelse[6],
+            lerret: this.images.utfoldelse[7]
+        },
+        this.imageRef.tegneserie = {
+            mann: this.images.tegneserie[0],
+            sverd: this.images.tegneserie[1],
+            kaniner: this.images.tegneserie[2],
+            engelDrage: this.images.tegneserie[3],
+            ritt: this.images.tegneserie[4],
+            drageBlod: this.images.tegneserie[5],
+            samora: this.images.tegneserie[6],
+            radhus: this.images.tegneserie[7],
+            kvinne: this.images.tegneserie[8],
+            studier: this.images.tegneserie[9],
+            drageTrening: this.images.tegneserie[10],
+            indre: this.images.tegneserie[11],
+            tarrot: this.images.tegneserie[12]
+        }
+    },
 
   getSamlingObject: function (array) {
     let returnObject = {
