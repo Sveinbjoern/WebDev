@@ -2,6 +2,7 @@
 //amnd the helper functions
 
 let update = false;
+let logoFont = null;
 let colorFieldValues = {
 	leftX: 0,
 	topY: 0,
@@ -37,7 +38,7 @@ let colors = {
 // 	colors.black = "#0b090A"
 // 	colors.white = "#e3ddde"
 function preload() {
-
+	logoFont = loadFont( "assets\\fonts\\WindSong-Regular.ttf", () => {console.log("success")}, () => {console.log("fail")})
 
 }
 
@@ -47,15 +48,15 @@ function setup() {
 	// console.log("setup")
 	setAttributes('antialias', true)
 	//basic p5 settings:
-	frameRate(30);
+	frameRate(24);
 	noStroke();
 	ellipseMode(CENTER);
 	rectMode(CORNER);
+	
+	textAlign(CENTER,CENTER)
 
 	//create a canvas to fill the content div from index.html
-	canvasContainer = select('#p5canvas');
-	var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
-	c.parent('p5canvas');
+	fitToScreen();
 
 	colors.setup();
 	
@@ -133,5 +134,9 @@ function drawColorField(){
 
 	fill(colors.white);
 	ellipse(colorFieldValues.middleX, colorFieldValues.middleY, colorFieldValues.circleR);
+	fill("black")
+	textFont(logoFont);
+	textSize(width/20 );
+	text("Team Eir", colorFieldValues.middleX,colorFieldValues.middleY)
 
 }

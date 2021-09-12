@@ -33,4 +33,7 @@
 	flex: 0 1 1px;
 
 }
+header{
+	overflow: visible;
+}
 

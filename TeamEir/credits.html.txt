@@ -1,3 +1,6 @@
+https://fonts.google.com/specimen/WindSong?preview.size=19&preview.text=TeamEir&preview.text_type=custom#glyphs
+font for logo
+
 https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space
 flex to make element cover screen
 

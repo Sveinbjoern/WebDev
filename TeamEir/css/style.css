@@ -33,6 +33,18 @@ body {
 /* Depends on screen width */
 
 /* Header text*/
+@font-face {
+	font-family: logoFont;
+	src: url('\\TeamEir\\assets\\fonts\\WindSong-Regular.ttf') format('truetype');
+  }
+
+
+
+#mainLogo{
+	font-family: logoFont, cursive;
+	z-index: 2;
+	overflow: visible;
+}
 h1{
 	
 }
