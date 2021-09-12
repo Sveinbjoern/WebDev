@@ -28,6 +28,23 @@ main > #cat_utfoldelse{
 
 } */
 
+
+
+.element{
+	max-width: 500px;
+
+	min-width: 300px;
+	
+/* 	
+	background-color: ; */
+}
+
+.element > img {
+	object-fit: contain;
+	max-width: 310px;
+	max-height: 310px;
+}
+
 main h2 {
     margin: 0px;
     color: black;

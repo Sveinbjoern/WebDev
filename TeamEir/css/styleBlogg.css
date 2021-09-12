@@ -1,0 +1,77 @@
+/* CSS  exclusive for samling.html */
+
+
+/* main  label {
+    cursor: pointer; 
+    margin: 0px, 10px;
+} */
+/* main > #cat_all{
+
+	
+
+
+}
+
+main > #cat_tegneserie{
+	
+    
+
+
+}
+main > #cat_husflid{
+
+
+}
+main > #cat_utfoldelse{
+
+
+
+} */
+
+main h1 {
+    margin: 0px;
+    color: black;
+    /* padding: 0px; */
+}
+main h3 {
+    
+    /* color: black; */
+    /* padding: 0px; */
+}
+#inspirationBlog{
+    background-color: #735b83;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+#gridArea {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: center;
+    
+  }
+
+.item:nth-child(odd){
+ 
+   background-color: #a79de4; 
+}
+.item:nth-child(even){
+  
+    background-color:  #b3a676;; 
+}.item:nth-child(odd) img{
+    float: left;
+    max-width: 40%;
+    height: auto;
+   
+}
+.item:nth-child(even) img{
+    float: right;
+    max-width: 40%;
+    height: auto;
+   
+}
+
+  

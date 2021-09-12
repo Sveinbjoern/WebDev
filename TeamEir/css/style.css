@@ -147,32 +147,19 @@ footer{
 	height: 300px;
 }
 
-.element{
-	max-width: 500px;
 
-	min-width: 300px;
-	
-/* 	
-	background-color: ; */
-}
-
-.element > img {
-	object-fit: contain;
-	max-width: 310px;
-	max-height: 310px;
-}
 
 #modal {
  display: none;
 }
 /* Grid */
 
-main > #flexArea{
+/* main > #flexArea{
 	display: flex;
 flex-wrap: wrap;
 
 background-color: #a79de4;
-}
+} */
 
 
 
