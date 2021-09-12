@@ -1,3 +1,9 @@
+let keyCodes = {
+	R: 82,
+}
+let tabVal = null;
+
+
 function drawTabs(){
 	strokeWeight(3);
 	stroke(colors.black)
@@ -8,12 +14,12 @@ function drawTabs(){
     }
 	
 	let tabHeight = tabVal.tabBottom -1;
-	line(0,tabHeight, tabVal.tabStarts[currentTab], tabHeight);
-	line(tabVal.tabStarts[currentTab]+ tabVal.tabWidth, tabHeight, width, tabHeight);
+	line(0,tabHeight, tabVal.tabStarts[tabVal.currentTab], tabHeight);
+	line(tabVal.tabStarts[tabVal.currentTab]+ tabVal.tabWidth, tabHeight, width, tabHeight);
 
 	
 	noStroke();
-	fill(tabVal.tabColor[currentTab%3])
+	fill(tabVal.tabColor[tabVal.currentTab%3])
 	rect(0,tabVal.tabBottom , width, tabVal.tabBottom)
 }
 
@@ -27,19 +33,20 @@ function drawTab(startingX, color,textIndex){
 	endShape();
 	textSize(tabVal.fontSize)
 	textAlign(CENTER,CENTER)
+	// console.log(document.getElementById("languageEN").checked)
 	if (document.getElementById("languageEN").checked)
 	{
 		text(tabVal.tabTextEN[textIndex],
-			startingX + tabVal.tabNarrow ,
-			tabVal.tabHeight-tabVal.tabBottom,
-			tabVal.distance)
+			startingX + tabVal.tabNarrow + tabVal.distance/4 ,
+			tabVal.tabBottom - (tabVal.tabBottom-tabVal.tabHeight)/2
+			)
 	} else{
 		// console.log(textIndex,"textIndex",tabVal.tabTextNo,"tabVal.tabTextNO" )
 		text(tabVal.tabTextNo[textIndex],
 			startingX + tabVal.tabNarrow + tabVal.distance/4 ,
-			tabVal.tabHeight -tabVal.tabBottom
+			tabVal.tabBottom - (tabVal.tabBottom-tabVal.tabHeight)/2
 			)
-			console.log(tabVal.tabBottom, tabVal.tabHeight)
+			// console.log(tabVal.tabBottom, tabVal.tabHeight)
 	}
 	
 	// console.log("logging drawTab", startingX, tabVal.tabBottom, tabVal.tabHeight )

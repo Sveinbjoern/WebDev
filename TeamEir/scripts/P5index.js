@@ -1,8 +1,41 @@
 //global variables that will store the toolbox colour palette
 //amnd the helper functions
 
+let update = false;
+let colorFieldValues = {
+	leftX: 0,
+	topY: 0,
+	middleX: 0,
+	middleY: 0,
+	circleR: 0,
+
+	update: function () {
+		this.middleX = width /2;
+		this.middleY = height/2;
+		this.circleR = this.middleX/2;
+	},
+	
+}
+
+let colors = {
+
+	setup: function(){
+		colors.blue = '#5139e4';//"#a79de4"
+		colors.indigo = '#4b0082';//"#735b83"
+		colors.satinSheenGold = '#ad9223';//"#b3a676"
+		colors.black = '#0b090A';
+		colors.white = '#e3ddde';
+	}
+
+	
+};	
 
 
+// colors.blue = "#5139e4"
+// 	colors.indigo = "#4b0082"
+// 	colors.satinSheenGold = "#ad9223";
+// 	colors.black = "#0b090A"
+// 	colors.white = "#e3ddde"
 function preload() {
 
 
@@ -11,34 +44,25 @@ function preload() {
 
 function setup() {
 	
-	console.log("setup")
+	// console.log("setup")
 	setAttributes('antialias', true)
 	//basic p5 settings:
 	frameRate(30);
+	noStroke();
+	ellipseMode(CENTER);
+	rectMode(CORNER);
 
 	//create a canvas to fill the content div from index.html
 	canvasContainer = select('#p5canvas');
 	var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
 	c.parent('p5canvas');
 
-	colors.blue = "#5139e4"
-	colors.indigo = "#4b0082"
-	colors.satinSheenGold = "#ad9223";
-	colors.black = "#0b090A"
-	colors.white = "#e3ddde"
-	background(255);
+	colors.setup();
 	
+	colorFieldValues.update();
 	
-	tabVal.tabBottom += height;
-	tabVal.tabHeight = tabVal.tabHeight + tabVal.tabBottom;
-	tabVal.distance += tabVal.tabWidth;
-
-
-	tabVal.tabColor = [colors.indigo, colors.satinSheenGold, colors.blue]
-
-	tabVal.tabStarts = [tabVal.start, tabVal.start + tabVal.distance,tabVal.start + tabVal.distance*2 ]
 	//create the drawManager
-	drawTabs();
+	
 
 }
 
@@ -49,91 +73,47 @@ function draw() {
 	//hasOwnProperty is a javascript function that tests
 	//if an object contains a particular method or property
 	//if there isn't a draw method the app will alert the user
+	
+	
 
 	if (update)
-	{
-		drawTabs();
-		update = false;
-	}
-}
-
-
-function fitToScreen(){
- console.log("fitToScreen");
- 
- 
- canvasContainer = select('#p5canvas');
- var c = createCanvas(canvasContainer.size().width, canvasContainer.size().height);
- c.parent('p5canvas');
- 
-}
-
-function drawTabs(){
-	strokeWeight(3);
-	stroke(colors.black)
-	drawTab(tabVal.tabStarts[0], tabVal.tabColor[0]);
-	drawTab(tabVal.tabStarts[1], tabVal.tabColor[1]);
-	drawTab(tabVal.tabStarts[2], tabVal.tabColor[2]);
+		{
+			colorFieldValues.update();
+			update = false;
+		}
+	drawColorField();
 	
-	let tabHeight = tabVal.tabBottom -1;
-	line(0,tabHeight, tabVal.tabStarts[currentTab], tabHeight);
-	line(tabVal.tabStarts[currentTab]+ tabVal.tabWidth, tabHeight, width, tabHeight);
-
-	
-	noStroke();
-	fill(tabVal.tabColor[currentTab])
-	rect(0,tabVal.tabBottom , width, tabVal.tabBottom)
 }
 
-function drawTab(startingX, color){
-	fill(color);
-	beginShape();
-	vertex(startingX, tabVal.tabBottom)
-	vertex(startingX + tabVal.tabNarrow, tabVal.tabHeight)
-	vertex(startingX + tabVal.tabWidth - tabVal.tabNarrow, tabVal.tabHeight)
-	vertex(startingX + tabVal.tabWidth, tabVal.tabBottom)
-	endShape(); 
-	// console.log("logging drawTab", startingX, tabVal.tabBottom, tabVal.tabHeight )
-}
+
 
 function keyPressed(){
 	if (keyCode = keyCodes.R)
 	{
 	
-		let elem = document.getElementById("languageEN")
-		// console.log(elem.checked)
-		elem.checked = !elem.checked;
-		// console.log(elem.value)
-
-		// elem = document.getElementsByClassName("English")
-
-		// elem.forEach(element => {
-		// 	element.style.display = "flex";
 		// });
 	}
 }
 
 function mousePressed(){
-	// soundeffects.ding.play();
-	// drawManager.reset();
-	
-	if (mouseY > tabVal.tabHeight && mouseY < tabVal.tabBottom)
-	{
-		console.log("correct height")
-		if (mouseX > tabVal.tabStarts[0]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[0] + tabVal.tabWidth - tabVal.tabNarrow)
-		{
-			currentTab = 0;
-			update = true;
-		} else if (mouseX > tabVal.tabStarts[1]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[1] + tabVal.tabWidth - tabVal.tabNarrow)
-		{
-			currentTab = 1;
-			update = true;
-		} else if (mouseX > tabVal.tabStarts[2]+ tabVal.tabNarrow && mouseX < tabVal.tabStarts[2] + tabVal.tabWidth - tabVal.tabNarrow)
-		{
-			currentTab = 2;
-			update = true;
-		}
-	}
 
-	console.log("mousePressed?   ")
+}
+
+
+
+function drawColorField(){
+	// console.log("drawColorField")
+	// console.log(color(colors.indigo))
+	fill(colors.indigo);
+	rect(colorFieldValues.leftX,colorFieldValues.middleY, colorFieldValues.middleX, colorFieldValues.middleY);
+	fill(colors.satinSheenGold);
+	rect(colorFieldValues.middleX,colorFieldValues.topY, colorFieldValues.middleX, colorFieldValues.middleY);
+	fill(colors.blue);
+	rect(colorFieldValues.leftX,colorFieldValues.topY, colorFieldValues.middleX, colorFieldValues.middleY);
+	fill(colors.black);
+	rect(colorFieldValues.middleX,colorFieldValues.middleY, colorFieldValues.middleX, colorFieldValues.middleY);
+
+	fill(colors.white);
+	ellipse(colorFieldValues.middleX, colorFieldValues.middleY, colorFieldValues.circleR);
+
 }

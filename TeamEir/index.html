@@ -3,7 +3,8 @@
   <head>
     <script src="lib/p5.js"></script>
     <script src="lib/jquery-3.6.0.min.js"></script>
-    <script src="scripts/P5sketch.js"></script>
+    <script src="scripts/helperFunctions.js"></script>
+    <script src="scripts/P5index.js"></script>
     <title>TeamEir</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -50,23 +51,23 @@
       <!-- style="display: none;" style="display: none;"-->
       <!-- <div> -->
       
-      <label for="languageEN">
-        <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO"  /></label>
         <label for="languageEN">
-        <img src="assets/img/40px-English_language.svg.png" id="flagEN"  /></label>
-      
-      <input type = "text" value = "search" id="searchbar"></input>
+          <img src="assets/img/40Flag_of_Norway.svg.png" id="flagNO" class="English" />
+          <!--</label> <label for="languageEN"> -->
+          <img src="assets/img/40px-English_language.svg.png" id="flagEN" class="Norsk" />
+        </label>
       <!-- </div> -->
-
+      <input type="text" value="search" id="searchbar"></input>
 
     </header>
 
 
-    
+   <div id="flex" >
+    <div id="beforeDiv"></div>
 
-<div id = "p5canvas"></div>
-
-  
+  <div id = "p5canvas"></div>
+    <div id="afterDiv"></div>
+  </div>
 
 
     <div id = "modal">

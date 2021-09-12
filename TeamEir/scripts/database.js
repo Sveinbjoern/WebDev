@@ -192,6 +192,96 @@ let myDatabase = {
     ]
 
 },
+imageRef: {
+    husflid: {
+        
+    },
+    utfoldelse: "",
+    tegneserie: "",
+},
+
+images: {
+    husflid: [
+        "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
+        [
+            "assets\\img\\husflid\\brikker\\72C5FDC864AE4DFEA91886549373FD3F.jpg",
+            "assets\\img\\husflid\\brikker\\406B040FA9AF45C986BA8C986A7BA7E2.jpg",
+            "assets\\img\\husflid\\brikker\\503875BC5C274C8FA29F9FF1DB6888D2.jpg",
+            "assets\\img\\husflid\\brikker\\EDA7AEA26D7442D5946D5B0A976167A9.jpg"
+        ],
+        [
+            "assets\\img\\husflid\\skapbokser\\694672C6A7514D4EBEB9E1BB3877AE7F.jpg",
+            "assets\\img\\husflid\\skapbokser\\E4A97ED327FA40229ADA78E2F929F04B.jpg"
+        ],
+        [
+            "assets\\img\\husflid\\vases\\D1D5EDCAB37F41D1AB24E610CB9AC253.jpg",
+            "assets\\img\\husflid\\vases\\EFC21D99216C4D90898FECE5E2D190D1.jpg"
+        ]
+    ],
+    utfoldelse: [
+        "assets\\img\\utfoldelse\\010.jpg",
+        "assets\\img\\utfoldelse\\015.jpg",
+        "assets\\img\\utfoldelse\\019.jpg",
+        "assets\\img\\utfoldelse\\027liten.jpg",
+        "assets\\img\\utfoldelse\\37085134_10155402451286927_4589019045054906368_n.jpg",
+        [
+            "assets\\img\\utfoldelse\\fargekart\\1.fargeoversiktRmotRo.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\2.fargeoversiktMmotRo.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\3.fargeoversiktMmotV.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\4.fargeoversiktBmotV.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\5.fargeoversiktBmotA.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\6.fargeoversiktCytilA.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\7.fargeoversiktCymotVg.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\8.fargeoversiktGrmotVg.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\9.fargeoversiktGrmotCh.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\10.fargeoversiktGumotCh.jpg",
+            "assets\\img\\utfoldelse\\fargekart\\11.fargeoversiktGumotO.jpg"
+
+        ],
+        [
+            "assets\\img\\utfoldelse\\green\\003liten.jpg",
+            "assets\\img\\utfoldelse\\green\\008liten.jpg",
+            "assets\\img\\utfoldelse\\green\\012liten.jpg"
+        ],
+        [
+            "assets\\img\\utfoldelse\\lerret\\016.jpg",
+            "assets\\img\\utfoldelse\\lerret\\045liten.jpg"
+        ]
+
+    ],
+    tegneserie: [
+        "assets\\img\\tegneserie\\_1112.jpg",
+        "assets\\img\\tegneserie\\002liten.jpg",
+        "assets\\img\\tegneserie\\BunnyrabitRust.jpg",
+        "assets\\img\\tegneserie\\Drageengel5.jpg",
+        "assets\\img\\tegneserie\\IMG_0002.jpg",
+        "assets\\img\\tegneserie\\img428.jpg",
+        "assets\\img\\tegneserie\\img436.jpg",
+        "assets\\img\\tegneserie\\img454.jpg",
+        "assets\\img\\tegneserie\\IMGliten.jpg",
+        "assets\\img\\tegneserie\\on3liten.jpg",
+        "assets\\img\\tegneserie\\twindragonInTrainingUniform3_LI.jpg",
+        [
+            "assets\\img\\tegneserie\\indre\\indre1liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre2liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre3liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre4liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre5liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre6liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre7liten.jpg",
+            "assets\\img\\tegneserie\\indre\\indre8liten.jpg"
+
+        ],
+        [
+            "assets\\img\\tegneserie\\tarrot\\0narren.jpg",
+            "assets\\img\\tegneserie\\tarrot\\1magikeren.jpg",
+            "assets\\img\\tegneserie\\tarrot\\2yppersteprestinnen.jpg"
+        ]
+
+
+    ]
+
+},
 
   getSamlingObject: function (array) {
     let returnObject = {
