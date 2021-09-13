@@ -32,9 +32,15 @@ main h1 {
     margin: 0px;
     color: black;
     /* padding: 0px; */
+	font-size: 3vw;
+
+
+	
+
+
 }
-main h3 {
-    
+main h2 {
+    font-size: 2vw;
     /* color: black; */
     /* padding: 0px; */
 }
@@ -91,12 +97,14 @@ main h3 {
 .element:nth-child(odd) img{
     float: left;
     max-width: 30%;
+    min-width: 300px;
     height: auto;
     border-radius: 10px 0px 0px 10px;
 }
 .element:nth-child(even) img{
     float: right;
     max-width: 30%;
+    min-width: 300px;
     height: auto;
     border-radius: 0px 10px 10px 0px;
    
@@ -118,11 +126,11 @@ main h3 {
     margin: 0px 10px;
    
 }
-/* .element h6{
-    float: inline-end;
+.element h6{
+    float: left;
     margin: 0px 10px;
    
-} */
+}
 
 
 

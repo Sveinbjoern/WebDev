@@ -358,14 +358,49 @@ imageRef: {},
   
     blogg: [
         {
-            "navn": "Ugler i mosen",
-            "name": "Owls in the moss",
-            "dato": "26. july 2021",
-            "date": "26th July 2021",
+            "navn": 'Endelig!',
+            "name": 'Finally!',
+            "dato": "25. july 2021",
+            "date": "25th July 2021",
+            "image": "assets\\img\\husflid\\thumbnail_P1000392.jpg",
+            "alt": "image of runes carved in wood coming out of nice looking pouch",
+            "author": "Gro-Mette",
+            "color": "#a79de4",
+            "innholdsTekst": ['Hva du ser under her er et bilde fra et “på vent” prosjekt fra helt tilbake til 2007. Mine helt egne hjemme svidde runer.',
+
+                "Hvordan startet dette prosjektet? Jo nå skal du høre. Året 2007, var jeg heldig å få ferdigkuttede treskiver fra en grein av blodbøk.",
+                "Planen min var alltid å skaffe meg et svijern. Tegne opp de nødvendige strekene. Å svi inn runene på hver sin trebit.",
+                "Årene tikker og går, og andre prosjekter tar forrang. Så kom dagen, og jeg fant fram det helt nye svijernet (en gave fra min kjære).",
+                
+                "Med linjal, penn og viskelær startet prosjektet. La oss heller ikke glemme runeboken som støttet mens jeg gikk gjennom en og en rune.",
+                    "Jeg erfarte raskt at det er små nyanser som avgjør om runen står i midten av treemnet eller, bare nok til siden til at det ikke blir sånn som du ønsker.",
+                
+                "Til slutt ble alle svidd inn i hvert sitt treemne. Se for deg selv."
+                ],
+            "flavourText": ['What you see here is a picture from a project I have had “on hold” from all the way back in 2007. My very own home made runes.',
+
+                "How did this project start? The year was 2007, and I was lucky to get som precut wooden slices of copper beech. My plan was to get a wood burner iron. Draw up the proper lines and burning the runes into every wood slice.",
+                
+                "The years went and other projects would come and go. Finally the day came and I got out the completely new wood burning iron(a gift from my dear).",
+                
+                "Med ruler, pencil and eraser I finally started my project. Let us not forget my book of runes that supporeted me as i carefully made the runes. One by one.",
+                
+                "I quickly experience how small neuances  decided if teh rune would be central or just a sligth tilt and it would not turn out as I would like.",
+                
+                "Eventually all the runes were burnt into their slice. Se for your self."
+                ],
+            "linker" : [],
+            "links" : [],
+        },
+        {
+            "navn": "Ugler i mosen:",
+            "name": "Owls in the moss:",
+            "dato": "18. july 2021",
+            "date": "18th July 2021",
             "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
             "alt": "image of the owls in mthe moss",
             "author": "Gro-Mette",
-            "color": "#a79de4",
+            "color": "#b3a676",
             "innholdsTekst": ["Små rester av tøy kan gjøres om til bordbrikker eller merkelig bordpynt. Spesielt hvis du har noen bittesmå uglefigurer liggende, for ikke å glemme litt superlim."],
             "flavourText": ["Small leftovers of cloth can be turned into tablechips or weird table decoration.Especially if you have some tiny owlfigures lying around, and not to forget some superglue. ",
                             "'Ugler i mosen' is a expression in norwegian. The expression means that that there is something fishy going on."],
@@ -374,12 +409,12 @@ imageRef: {},
         },
     
         {
-            "navn": "Sviprosjekt nr 1",
-            "name": "First Woodburner Project",
-            "dato": "1. july 2021",
-            "date": "1th July 2021",
-            "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
-            "alt": "image of The owls in mthe moss",
+            "navn": "Sviprosjekt nr 1:",
+            "name": "First Woodburner Project:",
+            "dato": "15. july 2021",
+            "date": "15th July 2021",
+            "image": "assets\\img\\husflid\\vases\\thumbnail_P1000386.jpg",
+            "alt": "image of lid decorated with hexigons and a bee",
             "author": "Gro-Mette",
             "color": "#a79de4",
             "innholdsTekst": ["Min kjære kjøpte oss et svijern fra Panduro! Det var et sett med et svijern og flere utbyttbare svihoder. Så, naturligvis får jeg ideer. Inspirasjoner jeg trenger min kunstferdige kones hjelp til å matrialisere.",
@@ -401,8 +436,73 @@ imageRef: {},
             "linker" : [],
             "links" : [],
         },
-    
+        {
+            "navn": "Vårt første felles kunstprosjekt:",
+            "name": "Our first joint art project:",
+            "dato": "12. july 2021",
+            "date": "12th july 2021",
+            "image": "assets\\img\\utfoldelse\\37085134_10155402451286927_4589019045054906368_n.jpg",
+            "alt": "image of joint art project with a snake and a dragon",
+            "author": "Gro-Mette",
+            "color": "#735b83",
+            "innholdsTekst": ["Min kjære, Sigrun (da forlovede) og jeg fikk en ide. Hva hvis vi malte et bilde på et lerret? Vi hadde en enighet om at det skulle være en slange og en drage på bildet, som skulle symbolisere oss to. Uten om det, var alt fritt.",
+                "Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre. Når hun tegnet form, fikk jeg til å bringe farger.",
+                "Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg. Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.",
+                "Vi fikk til å lage et bilde, vi ikke ville klart hver for oss.",
+                "Hvis du er nysgjerrig på min kones versjon følg linken under."],
+            "flavourText": ["My dear, Sigrun (then my fiancé) and I got an idea. What if we painted a picture on a canvas. We had an agreement that there would be a snake and a dragon on the picture to symbolize the two of us. Beyond that it was free to do what you wanted.",
+                "Quite quickly we discovered that... Our strengths complimented each other. When she added form, I could add color.",
+                "Truth be told, my dear has much more experience in drawing than me, so little problems rose. I had the idea to make a feather, that turned into... Not a feather. After explaining what I was trying to do I got some help from my dear. On the plus-side the piece now had an surprise fairy in it! In addition it was great fun to see how our different strengths complimented each other.",
+                "If you are curious of my wife’s version of events follow the link bellow."
+                ],
+            "linker" : [{"tekst":"Sigrun's TikTok post: ", "href":"https://www.tiktok.com/@runnadraco/video/6950728087520808197" ,"linkTekst": "https://www.tiktok.com/@runnadraco/video/6950728087520808197" }],
+            "links" : [{"text":"Sigrun's TikTok post: ", "href":"https://www.tiktok.com/@runnadraco/video/6950728087520808197" ,"linkText": "https://www.tiktok.com/@runnadraco/video/6950728087520808197" }],
+        }
+        
       ],
+
+
+    
+
+    // <div class="element">
+    //   <img src="assets/img/utfoldelse/37085134_10155402451286927_4589019045054906368_n.jpg">
+      
+    //   <h1 class="Norsk">Vårt første felles kunstprosjekt: </h1>
+    //   <h1 class="English">Our first joint artproject</h1>
+      
+    //   <h2 class="Norsk date">15. september 2021 </h2>
+    //   <h2 class="English date">15th september 2021</h2>
+      
+
+      
+    //   <br><br><br>
+    //   <h6 class="Norsk">Blogger: Gro-Mette</h6>
+    //   <h6 class="English">Bloger: Gro-Mette</h6>
+    //   <br><br>
+    //   <p class="Norsk">Min kjære (da forlovede) og jeg fikk en ide. Hva hvis vi malte et bilde på et lerret?
+    //     Vi hadde en enighet om at det skulle være en slange og en drage på bildet, som skulle symbolisere oss to. Uten om det, var alt fritt.
+    //     <br><br>
+    //     Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre.
+    //     Når hun tegnet form, fikk jeg til å bringe farger.
+    //     <br><br>
+    //     Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg.
+    //     Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.
+    //     <br><br>
+    //     Vi fikk til å lage et bilde, vi ikke ville klart hver for oss.
+    //     <br><br>
+    //     Hvis du er nysgjerrig på min kones versjon følg linken under.
+    //      </p>
+    //   <p class="English"></p><br>
+    //   <br>
+    //     Sigrun's TikTok post: <a href="https://www.tiktok.com/@runnadraco/video/6950728087520808197">https://www.tiktok.com/@runnadraco/video/6950728087520808197</a>
+      
+    // </div>
+
+
+
+
+
+
 
 getBlogObject: function (){
     let returnObject = {
@@ -411,7 +511,7 @@ getBlogObject: function (){
     this.blogg.forEach((elem)=>{
         returnObject.object.push(elem);
     })
-    console.log(returnObject)
+    // console.log("returnObject",returnObject)
     return returnObject;
 },
 
@@ -447,7 +547,7 @@ getBlogObject: function (){
 
     });
 
-    console.log("returnObject",returnObject)
+    // console.log("returnObject",returnObject)
     return returnObject
 
   },

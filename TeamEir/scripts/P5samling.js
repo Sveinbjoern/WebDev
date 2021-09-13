@@ -123,12 +123,12 @@ function setup() {
 	let elem = document.getElementById("languageEN")
 	elem.addEventListener('change', () => {
 		// console.log("eventlister working", elem.checked,JSON.stringify(elem.checked))
-		window.localStorage.setItem("English", JSON.stringify(elem.checked))
+		window.localStorage.setItem("EnglishLangueSelected", JSON.stringify(elem.checked))
 		update = true;
 	});
 	
 	//load from localStorge your language settings
-	let set = window.localStorage.getItem("English")
+	let set = window.localStorage.getItem("EnglishLangueSelected")
 	// console.log(set)
   	if (set != undefined)
 	  {
