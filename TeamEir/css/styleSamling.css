@@ -1,111 +1,75 @@
 /* CSS  exclusive for samling.html */
 
+.element {
+  max-width: 500px;
 
-/* main  label {
-    cursor: pointer; 
-    margin: 0px, 10px;
-} */
-/* main > #cat_all{
-
-	
-
-
-}
-
-main > #cat_tegneserie{
-	
-    
-
-
-}
-main > #cat_husflid{
-
-
-}
-main > #cat_utfoldelse{
-
-
-
-} */
-
-
-.element{
-	max-width: 500px;
-
-	min-width: 300px;
-	
-/* 	
-	background-color: ; */
+  min-width: 300px;
 }
 
 .element > img {
-	object-fit: contain;
-	max-width: 310px;
-	max-height: 310px;
+  object-fit: contain;
+  max-width: 310px;
+  max-height: 310px;
 }
-
 
 main h2 {
-    margin: 0px;
-    color: black;
-    /* padding: 0px; */
+  margin: 0px;
+  color: black;
 }
 main h3 {
-    
-    color: black;
-    /* padding: 0px; */
+  color: black;
 }
 
-#cat_type_all:checked ~ main #cat_all{
-    display: block;
-    background-color: #a79de4;
+/* CSS for choosing tab and changing background color */
+
+#cat_type_all:checked ~ main #cat_all {
+  display: block;
+  background-color: #a79de4;
 }
-#cat_type_all:checked ~ main #gridArea{
-    background-color: #a79de4;
+#cat_type_all:checked ~ main #gridArea {
+  background-color: #a79de4;
 }
-#cat_type_all:not(:checked) ~ main #cat_all{
-    display: none;
+#cat_type_all:not(:checked) ~ main #cat_all {
+  display: none;
 }
 
-#cat_type_tegneserie:checked ~ main #cat_tegneserie{
-    display: block;
-    background-color: #735b83;
+#cat_type_tegneserie:checked ~ main #cat_tegneserie {
+  display: block;
+  background-color: #735b83;
 }
-#cat_type_tegneserie:checked ~ main #gridArea{
-    background-color: #735b83;
+#cat_type_tegneserie:checked ~ main #gridArea {
+  background-color: #735b83;
 }
-#cat_type_tegneserie:not(:checked) ~ main #cat_tegneserie{
-    display: none;
-    
-}
-
-#cat_type_husflid:checked ~ main #cat_husflid{
-    display: block;
-    background-color:  #b3a676;
-}
-#cat_type_husflid:checked ~ main #gridArea{
-    background-color:  #b3a676;
-}
-#cat_type_husflid:not(:checked) ~ main #cat_husflid{
-    display: none;
+#cat_type_tegneserie:not(:checked) ~ main #cat_tegneserie {
+  display: none;
 }
 
-#cat_type_utfoldelse:checked ~ main #cat_utfoldelse{
-    display: block;
-    background-color: #a79de4;
+#cat_type_husflid:checked ~ main #cat_husflid {
+  display: block;
+  background-color: #b3a676;
 }
-#cat_type_utfoldelse:checked ~ main #gridArea{
-    background-color: #a79de4;
+#cat_type_husflid:checked ~ main #gridArea {
+  background-color: #b3a676;
 }
-#cat_type_utfoldelse:not(:checked) ~ main #cat_utfoldelse{
-    display: none;
+#cat_type_husflid:not(:checked) ~ main #cat_husflid {
+  display: none;
 }
 
+#cat_type_utfoldelse:checked ~ main #cat_utfoldelse {
+  display: block;
+  background-color: #a79de4;
+}
+#cat_type_utfoldelse:checked ~ main #gridArea {
+  background-color: #a79de4;
+}
+#cat_type_utfoldelse:not(:checked) ~ main #cat_utfoldelse {
+  display: none;
+}
+
+/* CSS for the grid of the elements in the collection */
 #gridArea {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 310px);
-    justify-content: center;
-  }
-
-  
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 310px);
+  justify-content: center;
+}

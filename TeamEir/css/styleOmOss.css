@@ -1,22 +1,4 @@
-/* CSS specific to index page */
-
-
-
-/* main:nth-child(odd) h2{
-	text-align: left;
-	background-color: #a79de4;
-} */
-/* main:nth-child(even) h2{
-	text-align: right;
-	padding-right: 30px;
-	background-color: #735b83;
-} */
-
-*{
-	text-align: center;
-}
-
-
+/* CSS specific to omOss.html page */
 
 #omOss{
 	
@@ -49,8 +31,6 @@
 	border-style:ridge;
 	border-width: thick;
 	border-color: #735b83;
-
-	
 	
 }
 #inspiration{

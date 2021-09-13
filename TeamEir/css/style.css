@@ -1,233 +1,124 @@
-/* This CSS file is for general CSS page wide */
+/* This CSS file is for general CSS site wide */
 
-
-
-/* Page wide css */
-*{
-	box-sizing: border-box;
-  	text-align: center;
+/* Site wide css */
+* {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 23px;
+  font-family: Helvetica, sans-serif, Arial;
 }
 html,
 body {
   margin: 0px;
-  height: 100% ;
-  
+  height: 100%;
 }
 
+/* Using a downloaded font */
 
-
-
-
-
-
-/* Hidden elements css */
-/* #hiddenElements {
-  display: none;
-  margin: ;
-} */
-
-
-
-
-
-/* Depends on screen width */
-
-/* Header text*/
 @font-face {
-	font-family: logoFont;
-	src: url('\\TeamEir\\assets\\fonts\\WindSong-Regular.ttf') format('truetype');
-  }
-
-
-
-#mainLogo{
-	font-family: logoFont, cursive;
-	z-index: 2;
-	overflow: visible;
+  font-family: logoFont;
+  src: url("\\TeamEir\\assets\\fonts\\WindSong-Regular.ttf") format("truetype");
 }
-h1{
-	
+
+/* Header CSS*/
+
+#mainLogo {
+  font-family: logoFont, cursive;
+  z-index: 2;
+  overflow: visible;
 }
-header a, footer a{
-	text-decoration: none;
-	
+
+header a,
+footer a {
+  text-decoration: none;
 }
 main p {
-	color: black;
-	margin: 15px;
+  color: black;
+  margin: 15px;
 }
 
-header a  h1{
-	text-emphasis: bold;
-	text-decoration: none;
-	color: black;
-	font-size: 2vw;
-	margin: 0px 5px;
-	/* padding: 0px; */
-	margin: 0%;
-	padding: 0%;
+header a h1 {
+  text-emphasis: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+  margin: 0px 5px;
 
+  margin: 0%;
+  padding: 0%;
 }
-footer a  h1{
-	text-emphasis: bold;
-	text-decoration: none;
-	color: black;
-	font-size: 2vw;
-	margin: 0px 5px;
-	/* padding: 0px; */
-	margin: 0%;
-	padding: 0%;
+footer a h1 {
+  text-emphasis: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+  margin: 0px 5px;
 
+  margin: 0%;
+  padding: 0%;
 }
 
-
-
-
- /* h1 + #flag {
-	text-emphasis: bold;
-	text-decoration: none;
-	color: white;
-	font-size: 1.5vw;
-} */
-
-/* #mainLogo a{
-
-} */
-
-/* header {
-
-	
-
-} */
-header{
-	/* grid-area: header; */
-	display: flex;
-	/* flex-direction: row; */
-	align-items: center;
-	justify-content: space-between;
-	background-color: #a79de4;
-	width: 100%;
-
-
-	
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a79de4;
+  width: 100%;
 }
 
-/* #5139e4 */
-
-footer{
-	display: flex;
-	/* flex-direction: row; */
-	align-items: center;
-	justify-content: space-around;
-	background-color:	#a79de4;
-	width: 100%;	
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #a79de4;
+  width: 100%;
 }
 
-/* .header {
-	grid-area: header;
-	font-family: Helvetica, sans-serif
-}
-.header {
-  background-color: #999;
-} */ 
-#searchbar { 
-	
-	display: block;
-	
-	width: 300px;
-	line-height: normal;
-	height: fit-content;
-	text-align: left;
-	font-size: large;
-	
- font-family: "Comic Sans MS", "Comic Sans";
- 
+#searchbar {
+  display: block;
+
+  width: 25vw;
+  line-height: normal;
+  height: fit-content;
+  text-align: left;
+  font-size: large;
+
+  font-family: "Comic Sans MS", "Comic Sans";
 }
 
-#p5canvas{
-	height: 300px;
-	cursor: pointer;
+/* Site wide CSS for the p5 extension area */
+#p5canvas {
+  height: 50px;
+  cursor: pointer;
 }
 
-
+/* modal content */
 
 #modal {
- display: none;
-}
-/* Grid */
-
-/* main > #flexArea{
-	display: flex;
-flex-wrap: wrap;
-
-background-color: #a79de4;
-} */
-
-
-
-	main {
-
-	justify-content: center;
-
-
-	/* display: grid; */
-	/* height: 100%; */
-	/* grid-template: none; */
-	/* grid-template-columns:300px 65px minmax(200px, 1fr)  300px; */
-	/* grid-template-rows: auto minmax(200px, 1fr) 160px ; */
-	/* grid-template-areas:
-		"header header header header"
-		"sidebarLeft sidebar drawField sidebarRight"
-		"colourP colourP  colorfill colorfill"; */
-	/* background-color: #fff; */
-	/* color: #444; */
-	/* align-items: stretch; */
-	}
-
-	/* .wrapper > div {
-		
-		text-align: center;
-		
-	  } */
-
-
-
-
-	  /* Language Change */
-#flagNO{
-	
-	cursor: pointer;
+  display: none;
 }
 
-#flagEN{
-	cursor: pointer;
-	display: block;
-}
-.English{
-	display: none;
-	/* color: violet; */
+/* General CSS for language switch */
+
+#flagNO {
+  cursor: pointer;
 }
 
-.Norsk{
-	display: inline;
-	/* color: violet; */
+#flagEN {
+  cursor: pointer;
+  display: block;
+}
+.English {
+  display: none;
 }
 
-#languageEN:checked ~ * .Norsk{
-	display: none;
-	
-}
-#languageEN:checked ~ * .English{
-	display: inline;
-	
+.Norsk {
+  display: inline;
 }
 
-
-
-/* #languageEN:checked + header  #flagNO{
-	display: none;
+#languageEN:checked ~ * .Norsk {
+  display: none;
 }
-#languageEN:checked + header #flagEN{
-	display: block;
-	cursor: pointer;
-} */
+#languageEN:checked ~ * .English {
+  display: inline;
+}

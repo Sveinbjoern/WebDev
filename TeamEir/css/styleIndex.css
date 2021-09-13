@@ -11,30 +11,15 @@
 	height: 100%;
 	overflow: hidden;
   }
-/* #beforeDiv{
-	flex: 0 1 auto;
-	overflow: hidden;
-} */
 
-/* flex: 0 1 auto; */
 #p5canvas{
 	
 	overflow: hidden;
   
   flex: 1 1 auto;
-	/* display: flex;
-  flex-flow: column; */
+
   
     height: auto;
 	max-width: 100%;
-}
-
-/* #afterDiv{
-	overflow: hidden;
-	flex: 0 1 1px;
-
-} */
-header{
-	overflow: visible;
 }
 
