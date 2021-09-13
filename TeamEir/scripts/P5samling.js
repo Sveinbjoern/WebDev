@@ -130,7 +130,7 @@ function setup() {
 	//load from localStorge your language settings
 	let set = window.localStorage.getItem("English")
 	// console.log(set)
-  	if (set)
+  	if (set != undefined)
 	  {
 		  
 		  elem.checked = JSON.parse(set);
@@ -139,7 +139,7 @@ function setup() {
 		
 		
 		// 	], 
-		createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}])
+		createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3,4]}])
 		
 		
 		

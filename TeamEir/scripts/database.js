@@ -1,19 +1,5 @@
 
 let myDatabase = {
-  blogg: [
-    {
-        "navn": "Telys i filt",
-        "name": "Candles in felt",
-        "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
-        "author": "Gro-Mette",
-        "overskrift": "adbadfb",
-        "headLine": "Blabitiblab",
-        "innholdsTekst": "Pyntegjenstand laget med gjenbruksmaterialer",
-        "flavourText": "Decoration made with recyclable material",
-
-    },
-
-  ],
 
   authorsImg: {
       Sigrun:       "assets\\img\\omOss\\Sigrun.jpg",
@@ -24,20 +10,28 @@ let myDatabase = {
     samling:{ 
       husflid: [
     JSON.stringify({
-        "navn": "Telys i filt",
-        "name": "Candleholders in felt",
+        "navn": "Ugler i mosen",
+        "name": "Owls in moss",
         "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
         "alt": "Image of handicrafted Candleholders with reused materials",
         "innholdsTekst": "Pyntegjenstand laget med gjenbruksmaterialer",
         "flavourText": "Decoration made with recyclable material",
     }),
     JSON.stringify({
-        "navn": "Resultat av svi-prosjekt",
-        "name": "Results from the woodburner project",
+        "navn": "Runer i tre",
+        "name": "Wood Runes",
+        "image": "assets\\img\\husflid\\thumbnail_P1000392.jpg",
+        "alt": "Image of handicrafted runes burnt into round wooden pieces",
+        "innholdsTekst": "",
+        "flavourText": "",
+    }),
+    JSON.stringify({
+        "navn": "Sviprosjekt med Hormoner og signalstoffer",
+        "name": "Woodburner project with hormones and neurotransmitters",
         "image": "assets\\img\\husflid\\brikker\\72C5FDC864AE4DFEA91886549373FD3F.jpg",
         "alt": "",
-        "innholdsTekst": "Dekorative brikker av tre laget med svijern",
-        "flavourText": "Decorative wood pieces etched with a woodburner",
+        "innholdsTekst": "",
+        "flavourText": "",
     }),
     JSON.stringify({
         "navn": "Skapbokser med himmel-tema",
@@ -61,8 +55,8 @@ let myDatabase = {
 
     tegneserie: [
         JSON.stringify({
-            "navn": "Mann som sitter med bena i kryss",
-            "name": "Man with feet crosed",
+            "navn": 'Illustrasjoner til tegneserien "Indre"',
+            "name": 'Ilustrations from the cartoon "Indre"',
             "image": "assets\\img\\tegneserie\\_1112.jpg",
             "alt": "drawing in manga style of a mann sitting with his legs crossed",
             "innholdsTekst": "",
@@ -76,58 +70,58 @@ let myDatabase = {
             "innholdsTekst": "",
             "flavourText": ""}),
         JSON.stringify({
-            "navn": "Kaniner",
-            "name": "Bunny rabbits",
+            "navn": "Kaninen Rust",
+            "name": "Bunny Rust",
             "image": "assets\\img\\tegneserie\\BunnyrabitRust.jpg",
-            "alt": "",
+            "alt": "drawing of a rabbitlike lady and a bunnyrabbit",
             "innholdsTekst": "",
             "flavourText": "",
         }),
         JSON.stringify({
-            "navn": "Drage engel",
-            "name": "Angel dragon",
+            "navn": "Tegnegaver",
+            "name": "Drawn gifts",
             "image": "assets\\img\\tegneserie\\Drageengel5.jpg",
-            "alt": "",
-            "innholdsTekst": "",
-            "flavourText": "",
+            "alt": "Image of an ipressive dragon with white feathers",
+            "innholdsTekst": "Verk som ble laget som gaver: Drage-engel",
+            "flavourText": "works made as gifts: Angel Dragon",
         }),
         JSON.stringify({
-            "navn": "De reiser på ritt",
-            "name": "The riders",
+            "navn": "Tegnegaver",
+            "name": "Drawn gifts",
             "image": "assets\\img\\tegneserie\\IMG_0002.jpg",
             "alt": "",
-            "innholdsTekst": "",
-            "flavourText": "",
+            "innholdsTekst": "Verk som ble laget som gaver: Hesteryttere",
+            "flavourText": "works made as gifts: Horse Riders",
         }),
         JSON.stringify({
-            "navn": "Hun har drageblod",
-            "name": "She has dragon blood",
+            "navn": 'Inspirert av "Alucard Hellsing"',
+            "name": 'Inspiered by "Alucard Hellsing"',
             "image": "assets\\img\\tegneserie\\img428.jpg",
             "alt": "",
             "innholdsTekst": "",
             "flavourText": "",
         }),
         JSON.stringify({
-            "navn": "Fra historien om Samora",
-            "name": "From the story of Samora",
+            "navn": 'Illustrasjoner til tegneserien "Edel Sten"',
+            "name": 'Illustrations for the cartoon "Edel Sten"',
             "image": "assets\\img\\tegneserie\\img436.jpg",
-            "alt": "",
-            "innholdsTekst": "",
-            "flavourText": "",
+            "alt": "Drawing of two women one light and one dark, coming together for a hug",
+            "innholdsTekst": "Etine og Samora",
+            "flavourText": "Etine and Samora",
         }),
         JSON.stringify({
-            "navn": "Rådhuset i Åsnes",
+            "navn": "Tegneoppdrag 2011",
             "name": "City counsel building",
             "image": "assets\\img\\tegneserie\\img454.jpg",
             "alt": "",
-            "innholdsTekst": "",
+            "innholdsTekst": "Rådhuset i Åsnes",
             "flavourText": "A local city counsel building from the municipallity where Sigrun grew up",
         }),
         JSON.stringify({
-            "navn": "Kvinne med lilla bakgrunn",
+            "navn": "Illustrasjoner til tegneserien Edel Sten",
             "name": "Women in purple background",
             "image": "assets\\img\\tegneserie\\IMGliten.jpg",
-            "alt": "",
+            "alt": "Drawing of woman in a purple background",
             "innholdsTekst": "",
             "flavourText": "",
         }),
@@ -140,12 +134,12 @@ let myDatabase = {
             "flavourText": "",
         }),
         JSON.stringify({
-            "navn": "Tvilling drage i treningsuniform",
-            "name": "Twin dragon in training Uniform",
+            "navn": 'Illustrasjoner til tegneserien "The Divine Twin Dragon"',
+            "name": 'illustrations for the cartoon "The Divine Twin Dragon"',
             "image": "assets\\img\\tegneserie\\twindragonInTrainingUniform3_LI.jpg",
-            "alt": "",
-            "innholdsTekst": "",
-            "flavourText": "",
+            "alt": "drawing of dragon-person in training uniform",
+            "innholdsTekst": "Tvilling drage i treningsuniform",
+            "flavourText": "Twin dragon in training Uniform",
         }),
         JSON.stringify({
             "navn": "Fra historien 'indre'",
@@ -178,8 +172,8 @@ let myDatabase = {
             "flavourText": "",
         }),
         JSON.stringify({
-            "navn": "Lys-strøm",
-            "name": "Light stream",
+            "navn": "Gyllen kraft",
+            "name": "Golden power",
             "image": "assets\\img\\utfoldelse\\015.jpg",
             "alt": "",
             "innholdsTekst": "",
@@ -243,6 +237,7 @@ let myDatabase = {
 images: {
     husflid: [
         "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
+        "assets\\img\\husflid\\thumbnail_P1000392.jpg",
         [
             "assets\\img\\husflid\\brikker\\72C5FDC864AE4DFEA91886549373FD3F.jpg",
             "assets\\img\\husflid\\brikker\\406B040FA9AF45C986BA8C986A7BA7E2.jpg",
@@ -255,7 +250,8 @@ images: {
         ],
         [
             "assets\\img\\husflid\\vases\\D1D5EDCAB37F41D1AB24E610CB9AC253.jpg",
-            "assets\\img\\husflid\\vases\\EFC21D99216C4D90898FECE5E2D190D1.jpg"
+            "assets\\img\\husflid\\vases\\EFC21D99216C4D90898FECE5E2D190D1.jpg",
+            "assets\\img\\husflid\\vases\\thumbnail_P1000386.jpg"
         ]
     ],
     utfoldelse: [
@@ -328,9 +324,10 @@ imageRef: {},
     setupImageRef: function (){
         this.imageRef.husflid = {
             filtGjennbruk: this.images.husflid[0],
-            brikker: this.images.husflid[1],
-            skapbokser: this.images.husflid[2],
-            vases: this.images.husflid[3]
+            treRuner: this.images.husflid[1],
+            brikker: this.images.husflid[2],
+            skapbokser: this.images.husflid[3],
+            vases: this.images.husflid[4]
         },
         this.imageRef.utfoldelse = {
             kobledePrikker: this.images.utfoldelse[0],
@@ -358,6 +355,65 @@ imageRef: {},
             tarrot: this.images.tegneserie[12]
         }
     },
+  
+    blogg: [
+        {
+            "navn": "Ugler i mosen",
+            "name": "Owls in the moss",
+            "dato": "26. july 2021",
+            "date": "26th July 2021",
+            "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
+            "alt": "image of the owls in mthe moss",
+            "author": "Gro-Mette",
+            "color": "#a79de4",
+            "innholdsTekst": ["Små rester av tøy kan gjøres om til bordbrikker eller merkelig bordpynt. Spesielt hvis du har noen bittesmå uglefigurer liggende, for ikke å glemme litt superlim."],
+            "flavourText": ["Small leftovers of cloth can be turned into tablechips or weird table decoration.Especially if you have some tiny owlfigures lying around, and not to forget some superglue. ",
+                            "'Ugler i mosen' is a expression in norwegian. The expression means that that there is something fishy going on."],
+            "linker" : [],
+            "links" : [],
+        },
+    
+        {
+            "navn": "Sviprosjekt nr 1",
+            "name": "First Woodburner Project",
+            "dato": "1. july 2021",
+            "date": "1th July 2021",
+            "image": "assets\\img\\husflid\\A3F801EFE3694AEE8D368CE20C9D550A.jpg",
+            "alt": "image of The owls in mthe moss",
+            "author": "Gro-Mette",
+            "color": "#a79de4",
+            "innholdsTekst": ["Min kjære kjøpte oss et svijern fra Panduro! Det var et sett med et svijern og flere utbyttbare svihoder. Så, naturligvis får jeg ideer. Inspirasjoner jeg trenger min kunstferdige kones hjelp til å matrialisere.",
+                "I lang tid har jeg latt meg inspirere av å se heksagoner og bie pynt. Mitt første prosjekt var å ta trelokket til teppekurven vår og tegne på heksagoner. Vent! Før det måtte jeg pusse treplaten sånn at den var glatt og fin.",
+                "Mye arbeid senere, spurte jeg Dragen (min kone), om hun kunne hjelpe meg med heksagonene. Hun ble forklart at jeg ikke ønsket å fylle ut hele plater med de 6 kantede. Hvorpå hun informerte meg at hun måtte fylle opp hele platen med dem, for symmetri og balanse. Senere kunne jeg viske ut de jeg ikke ønsket.",
+                "Personlig, ble jeg veldig imponert over ferdighet og tålmodighet i Dragen.",
+                "Under prosessen lette jeg fram bie-tegninger, for inspirasjon. Sånn at Dragen kunne se hva jeg mente, og utvikle sin egen bie skisse på platen.",
+                "Når så heksagonene var ferdig, valgte jeg ut de jeg ønsket. Igjen ga Dragen meg tips om at oddetalls fordeling stort sett ser mer behagelig ut for det menneskelige øye. Så da ble det sånn.",
+                "Dragen var snill nok til å tegne inn bien, og så begynte jeg å svi. Etterfylt av akrylmaling, og så en beskyttende lakk.",
+                "Vi ble fornøyde med resultatet."],
+            "flavourText": ["My dear(Sigrun) bought for us a woodburner iron! This was a set with the iron and several switchable heads. Naturaly I get some ideas. Inspirations that I will need my artful wifes help to materialize.", 
+                "For a long time I have been inspired by hexagons, and bee patterns in decorations. My first project was to take the wodden lid of our blanket basket og draw hexagons on it. Wait! Before that I had to brush with sandpaper so that it was smooth.",
+                "A lot of work later, I asked my Dragon(what I sometimes call my wife), if she could help med with the hexagons. I explained that I did not want to fill out the whole plate with shapes. She explained that it was best to fill the whole plate, to keep symmetry and balance. Later we could remove unwanted lines.",
+                "Personally, I was very impressed by the skills and patiece of my Dragon.",
+                "During the process I searched out bee drawings for inspiration. So that my Dragon could see what I want to make and help me develop sketches for the plate.",
+                "Now that the hexagons were done, I choose the once I wanted. Again my Dragon gave me tips that an odd number was broadly more pleasing to the human perception. So I made an odd number of hexagons.",
+                "My Dragon was kind enough to sketch in the bee for me and I burned it into the wood. Followed by acrylic paint, and a protective varnish.",
+                "We were pleased with the result."],
+            "linker" : [],
+            "links" : [],
+        },
+    
+      ],
+
+getBlogObject: function (){
+    let returnObject = {
+        object: [],
+    }
+    this.blogg.forEach((elem)=>{
+        returnObject.object.push(elem);
+    })
+    console.log(returnObject)
+    return returnObject;
+},
 
   getSamlingObject: function (array) {
     let returnObject = {

@@ -54,10 +54,10 @@ function setup() {
 
 	//load from localStorge your language settings
 	let set = window.localStorage.getItem("English")
-	// console.log(set)
-  	if (set)
+	// console.log("set",set)
+  	if (set != undefined)
 	{
-		
+		// console.log("set",set)
 	  elem.checked = JSON.parse(set);
 
 	} 
@@ -70,14 +70,28 @@ function setup() {
 	colors.setup()
 	
 	
-	//create the drawManager
-	drawTabs();
-
 
 	//handlebars handling. Filling the templates in the page.
-	gridDisplayTemplate = Handlebars.compile(gridDisplayTemplate);
-	createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}])
-		 
+	gridBlogTemplate = Handlebars.compile(gridBlogTemplate);
+	console.log(gridBlogTemplate)
+	// createHandlebarElements([{type: "tegneserie", indices: [0,1,2,3,4,5,6,7,8,9,10,11,12]},{type: "utfoldelse", indices: [0,1,2,3,4,5,6,7]}, {type: "husflid", indices: [0,1,2,3]}])
+	elem = document.getElementById("gridArea") 
+	//   }) )[0] )   ,1,2,3,4,5,6,7,8,9,10,11,12,13
+	console.log("myDatabase.getBlogObject()",myDatabase.getBlogObject())
+	console.log("gridBlogTemplate(myDatabase.getBlogObject())",gridBlogTemplate(myDatabase.getBlogObject()))
+	console.log("$(gridBlogTemplate(myDatabase.blogg[0]))",$(gridBlogTemplate(myDatabase.getBlogObject())))
+
+	let object = $(gridBlogTemplate(myDatabase.getBlogObject()))
+	console.log("object",object)
+	console.log("object[0]", object[0] )
+	elem.append(object[0])
+	//   console.log("object",$(gridDisplayTemplate(myDatabase.getSamlingObject(objectArray)))[6])
+	//   let length = object.length;
+	//   for (let i = 0; i < length; i+=2)
+	//   {
+	// 	//   console.log("object[i]",object[i])
+	// 	  elem.append(object[i])
+	//   }	 
 	
 }
 
@@ -106,8 +120,4 @@ function keyPressed(){
 function mousePressed(){
 	
 	
-	if (mouseY > tabVal.tabHeight && mouseY < tabVal.tabBottom)
-	{
-		
-	}
 }

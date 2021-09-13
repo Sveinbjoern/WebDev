@@ -105,135 +105,119 @@
 
     <div id="gridArea">
 
-      <div class="item">
-        <img src="assets/img/utfoldelse/37085134_10155402451286927_4589019045054906368_n.jpg">
-        <h2 class="Norsk">Vår første felles kunstprosjekt: </h2>
-        <h2 class="English">Our first joint artproject</h2>
-        <br>
-        <h3 class="Norsk">Blogger: Gro-Mette</h3>
-        <h3 class="English">Bloger: Gro-Mette</h3>
-        <br><br>
-        <p class="Norsk">Min kjære (da forlovede) og jeg fikk en ide. Hva hvis vi malte et bilde på et lerret?
-          Vi hadde en enighet om at det skulle være en slange og en drage på bildet, som skulle symbolisere oss to. Uten om det, var alt fritt.
-          <br><br>
-          Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre.
-          Når hun tegnet form, fikk jeg til å bringe farger.
-          <br><br>
-          Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg.
-          Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.
-          <br><br>
-          Vi fikk til å lage et bilde, vi ikke ville fått hver for oss.
-          <br><br>
-          Hvis du er nysgjerrig på min kones versjon følg linken under.
-           </p>
-        <p class="English"></p><br>
-        <br>
-          Sigrun's TikTok post: <a href="https://www.tiktok.com/@runnadraco/video/6950728087520808197">https://www.tiktok.com/@runnadraco/video/6950728087520808197</a></email>
+       <!-- handlebars template used to create all elements bellow -->
+       <script>
+        let gridBlogTemplate = `
+      {{#each object}}
+        <div class = "element" style = "background-color: {{{this.color}}};">
+          <img src = {{{this.image}}} alt = {{{this.alt}}}>
+        <h1 class = "Norsk"> {{{this.navn}}}</h1>
+        <h1 class = "English"> {{{this.name}}}</h1>
         
-      </div>
-
-      <div class="item">
-        <img src="assets/img/utfoldelse/37085134_10155402451286927_4589019045054906368_n.jpg">
-        <h2 class="Norsk">Vår første felles kunstprosjekt: </h2>
-        <h2 class="English">Our first joint artproject</h2>
-        <br>
-        <h3 class="Norsk">Blogger: Gro-Mette</h3>
-        <h3 class="English">Bloger: Gro-Mette</h3>
-        <br><br>
-        <p class="Norsk">Min kjære (da forlovede) og jeg fikk en ide. Hva hvis vi malte et bilde på et lerret?
-          Vi hadde en enighet om at det skulle være en slange og en drage på bildet, som skulle symbolisere oss to. Uten om det, var alt fritt.
-          <br><br>
-          Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre.
-          Når hun tegnet form, fikk jeg til å bringe farger.
-          <br><br>
-          Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg.
-          Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.
-          <br><br>
-          Vi fikk til å lage et bilde, vi ikke ville fått hver for oss.
-          <br><br>
-          Hvis du er nysgjerrig på min kones versjon følg linken under.
-           </p>
-        <p class="English"></p><br>
-        <br>
-          Sigrun's TikTok post: <a href="https://www.tiktok.com/@runnadraco/video/6950728087520808197">https://www.tiktok.com/@runnadraco/video/6950728087520808197</a></email>
-        
-      </div>
-
-      <div class="item">
-        <h3 class="Norsk">Manga tegnekurs hos oss</h3>
-        <h3 class="English">Manga drawing course in our home</h3>
-        <br>
-        <h3 class="Norsk">Kursholder: Sigrun</h3>
-        <h3 class="English">Course by Sigrun</h3>
-        <br><br>
-        <p class="Norsk">Til dere som bor på Østlandet og kan ta veien hjem til oss, starter vi opp med manga 
-          tegnekurs hjemme hos oss. Sigrun har holdt på med tegning i 
-          mange år og kan vise teknikker som "Teknikker som du kan vise"<br>
-          
-          <br>
-          pris: Ennå ikke satt<br>
-          
-          <br>
-          Du har bruk for:<br>
-          Greier du har bruk for<br>
-          Greier du har bruk for<br>
-          Greier du har bruk for<br>
-          <br>
-          Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
-        </p>
-        <p class="English"></p>
-      </div>
-
-      <div class="item">
-        <h3 class="Norsk">Kunsten å lage det du trenger av gjenbrukartikkler, hos oss</h3>
-        <h3 class="English">The art of making what you need from reued item at our home</h3>
-        <br>
-        <h3 class="Norsk">Kursholder: Gro-Mette</h3>
-        <h3 class="English">Course by Gro-Mette</h3>
+        <h2 class = "Norsk date"> {{{this.dato}}}</h2>
+        <h2 class = "English date"> {{{this.date}}}</h2>
+        <br><br><br>
+        <h6 class="Norsk">Blogger: {{{this.author}}}</h6>
+        <h6 class="English">Bloger: {{{this.author}}}</h6>
         <br><br>
         <p class="Norsk">
-          
-          Vår første felles kunst: vedlegg (tiktok: https://www.tiktok.com/@runnadraco/video/6950728087520808197?lang=en&is_copy_url=0&is_from_webapp=v1&sender_device=pc&sender_web_id=6943536746068936197 )
-
-          Sviprosjekt nr. 1: biebordet bildet
-
-          Ugler i mosen, eller gjenbruk og superlim: ugler i mosebildet for sterinlysholdere bildet
-
-          Prosessen av selvlagde tarotkort: Narren nr 0 tegningen
-
-          Endelig, Ting tar tid eller det er aldrig for sent: Runer i tre bildet
-
-          <br>
-          <br>
-          pris: Mange gode ideer<br>
-          <br>
-          Du har bruk for:<br>
-          -Evne til å idemyldre i lag<br>
-          -Troen på deg selv til å skape<br>
-          -Kunne gjøre research på nett<br>
-          <br> 
-          Ta kontakt per Epost <a href="mailto:FakeEmail@gmail.com">FakeEmail@gmail.com</a></email>
+        {{#each this.innholdsTekst}}
+          {{{this}}}
+          <br><br>
+        {{/each}} 
+        {{#each this.linker}}
+          {{{this.tekst}}} <a href = "{{{this.href}}}"> {{{this.linkTekst}}} </a>
+        {{/each}} 
         </p>
-        <p class="English"></p>
-      </div>
-
-      <!-- handlebars template used to create all elements bellow -->
-      <script>
-        let gridDisplayTemplate = `
-      {{#each object}}
-        <div class = "element English">
-        <h3> {{{this.name}}}</h3>
-        <img src = {{{this.image}}}>
-        <p> {{{this.flavourText}}} </p>
-        </div>
-        <div class = "element Norsk">
-        <h3> {{{this.navn}}}</h3>
-        <img src = {{{this.image}}}>
-        <p> {{{this.innholdsTekst}}} </p>
-        </div>
-        
+        <p class="English">
+        {{#each this.flavourText}}
+          {{{this}}}
+          <br><br>
+        {{/each}} 
+        {{#each this.links}}
+          {{{this.text}}} <a href = "{{{this.href}}}"> {{{this.linkText}}} </a>
+        {{/each}} 
+        </p>
       {{/each}} `
       </script>
+
+
+
+
+
+
+      <div class="element">
+        <img src="assets/img/utfoldelse/37085134_10155402451286927_4589019045054906368_n.jpg">
+        
+        <h1 class="Norsk">Ugler i mosen</h1>
+        <h1 class="English">Our first joint artproject</h1>
+        
+        <h2 class="Norsk date">15. september 2021 </h2>
+        <h2 class="English date">15th september 2021</h2>
+        
+        
+        
+        <br><br><br>
+        <h6 class="Norsk">Blogger: Gro-Mette</h6>
+        <h6 class="English">Bloger: Gro-Mette</h6>
+        <br><br>
+        <p class="Norsk">Min kjære (da forlovede) og jeg fikk en ide. 
+          Hva hvis vi malte et bilde på et lerret?
+          Vi hadde en enighet om at det skulle være en slange og en drage på bildet, 
+          som skulle symbolisere oss to. Uten om det, var alt fritt.
+          <br><br>
+          Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre.
+          Når hun tegnet form, fikk jeg til å bringe farger.
+          <br><br>
+          Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg.
+          Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.
+          <br><br>
+          Vi fikk til å lage et bilde, vi ikke ville klart hver for oss.
+          <br><br>
+          Hvis du er nysgjerrig på min kones versjon følg linken under.
+           
+        
+          <br><br>
+          Sigrun's TikTok post: <a href="https://www.tiktok.com/@runnadraco/video/6950728087520808197">https://www.tiktok.com/@runnadraco/video/6950728087520808197</a>
+          </p>
+          <p class="English"></p><br>
+      </div>
+
+      <div class="element">
+        <img src="assets/img/utfoldelse/37085134_10155402451286927_4589019045054906368_n.jpg">
+        
+        <h1 class="Norsk">Vår første felles kunstprosjekt: </h1>
+        <h1 class="English">Our first joint artproject</h1>
+        
+        <h2 class="Norsk date">15. september 2021 </h2>
+        <h2 class="English date">15th september 2021</h2>
+        
+
+        
+        <br><br><br>
+        <h6 class="Norsk">Blogger: Gro-Mette</h6>
+        <h6 class="English">Bloger: Gro-Mette</h6>
+        <br><br>
+        <p class="Norsk">Min kjære (da forlovede) og jeg fikk en ide. Hva hvis vi malte et bilde på et lerret?
+          Vi hadde en enighet om at det skulle være en slange og en drage på bildet, som skulle symbolisere oss to. Uten om det, var alt fritt.
+          <br><br>
+          Ganske raskt oppdaget vi at.. våre ulike styrker, komplementerte hverandre.
+          Når hun tegnet form, fikk jeg til å bringe farger.
+          <br><br>
+          Nå skal det sies at min kjære, har mer erfaring med tegning enn meg, så når små bomper oppsto. Situasjoner som når jeg fikk ideen om fjær, som ble om til … ikke fjær. Klarte hun å berge dem, når jeg, etterpå, forklarte ideen min. På plussiden fikk tegningen en utilsiktet fe i seg.
+          Samt, det var morsomt å se hvordan våre ulike styrker utfylte hverandre.
+          <br><br>
+          Vi fikk til å lage et bilde, vi ikke ville fått hver for oss.
+          <br><br>
+          Hvis du er nysgjerrig på min kones versjon følg linken under.
+           </p>
+        <p class="English"></p><br>
+        <br>
+          Sigrun's TikTok post: <a href="https://www.tiktok.com/@runnadraco/video/6950728087520808197">https://www.tiktok.com/@runnadraco/video/6950728087520808197</a>
+        
+      </div>
+
+     
 
     </div>
 

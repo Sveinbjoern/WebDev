@@ -114,7 +114,7 @@ function setup() {
 	//load from localStorge your language settings
 	let set = window.localStorage.getItem("English")
 	// console.log(set)
-  	if (set)
+  	if (set != undefined)
 	{
 		
 	  elem.checked = JSON.parse(set);

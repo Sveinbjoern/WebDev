@@ -54,6 +54,7 @@ header a, footer a{
 }
 main p {
 	color: black;
+	margin: 15px;
 }
 
 header a  h1{
